@@ -1,0 +1,2 @@
+# GZHGomoku
+Demo

@@ -1,0 +1,118 @@
+{
+  "images" : [
+    {
+      "extent" : "full-screen",
+      "idiom" : "iphone",
+      "subtype" : "736h",
+      "filename" : "启动页1242*2208 下午8.58.16-1.png",
+      "minimum-system-version" : "8.0",
+      "orientation" : "portrait",
+      "scale" : "3x"
+    },
+    {
+      "extent" : "full-screen",
+      "idiom" : "iphone",
+      "subtype" : "667h",
+      "filename" : "启动页750*1334 下午8.58.16-1.png",
+      "minimum-system-version" : "8.0",
+      "orientation" : "portrait",
+      "scale" : "2x"
+    },
+    {
+      "orientation" : "portrait",
+      "idiom" : "iphone",
+      "extent" : "full-screen",
+      "minimum-system-version" : "7.0",
+      "scale" : "2x"
+    },
+    {
+      "extent" : "full-screen",
+      "idiom" : "iphone",
+      "subtype" : "retina4",
+      "filename" : "LaunchImage-568h@2x-1.png",
+      "minimum-system-version" : "7.0",
+      "orientation" : "portrait",
+      "scale" : "2x"
+    },
+    {
+      "orientation" : "portrait",
+      "idiom" : "iphone",
+      "filename" : "启动页320*480 下午8.58.16-1.png",
+      "extent" : "full-screen",
+      "scale" : "1x"
+    },
+    {
+      "orientation" : "portrait",
+      "idiom" : "iphone",
+      "filename" : "LaunchImage-700@2x.png",
+      "extent" : "full-screen",
+      "scale" : "2x"
+    },
+    {
+      "orientation" : "portrait",
+      "idiom" : "iphone",
+      "filename" : "LaunchImage@2x.png",
+      "extent" : "full-screen",
+      "subtype" : "retina4",
+      "scale" : "2x"
+    },
+    {
+      "extent" : "full-screen",
+      "idiom" : "iphone",
+      "subtype" : "retina4",
+      "filename" : "LaunchImage-568h@2x.png",
+      "minimum-system-version" : "7.0",
+      "orientation" : "portrait",
+      "unassigned" : true,
+      "scale" : "2x"
+    },
+    {
+      "extent" : "full-screen",
+      "idiom" : "iphone",
+      "subtype" : "retina4",
+      "filename" : "LaunchImage-700-568h@2x-1.png",
+      "minimum-system-version" : "7.0",
+      "orientation" : "portrait",
+      "unassigned" : true,
+      "scale" : "2x"
+    },
+    {
+      "extent" : "full-screen",
+      "idiom" : "iphone",
+      "subtype" : "retina4",
+      "filename" : "LaunchImage-700-568h@2x.png",
+      "minimum-system-version" : "7.0",
+      "orientation" : "portrait",
+      "unassigned" : true,
+      "scale" : "2x"
+    },
+    {
+      "orientation" : "portrait",
+      "idiom" : "iphone",
+      "filename" : "LaunchImage.png",
+      "extent" : "full-screen",
+      "unassigned" : true,
+      "scale" : "2x"
+    },
+    {
+      "orientation" : "portrait",
+      "idiom" : "iphone",
+      "filename" : "LaunchImage@2x-1.png",
+      "extent" : "full-screen",
+      "unassigned" : true,
+      "scale" : "2x"
+    },
+    {
+      "filename" : "启动页480*800 下午8.58.16-1.png",
+      "unassigned" : true
+    },
+    {
+      "filename" : "启动页720*1280 下午8.58.16-1.png",
+      "unassigned" : true
+    }
+  ],
+  "info" : {
+    "version" : 1,
+    "author" : "xcode"
+  }
+}

@@ -1,25 +1,230 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="cVX-p7-X0D">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="DtV-U1-2KI">
+            <objects>
+                <navigationController navigationBarHidden="YES" id="cVX-p7-X0D" sceneMemberID="viewController">
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ugp-PJ-AmP">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="EOt-JP-SJa"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lye-Fw-8dB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-927" y="104"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" restorationIdentifier="MainController" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="YYQ-uD-RY7"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-5" y="70"/>
+        </scene>
+        <!--Gomoku Game Sences View Controller-->
+        <scene sceneID="Lt3-VQ-RdR">
+            <objects>
+                <viewController storyboardIdentifier="GZHGomokuGameSencesViewController" id="epA-XS-AWG" customClass="GZHGomokuGameSencesViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="UAi-6H-jNJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="LIe-si-fyL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ZlJ-RG-fhc">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="stone_white" translatesAutoresizingMaskIntoConstraints="NO" id="nlZ-Y1-sn4">
+                                <rect key="frame" x="230" y="99" width="20" height="20"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="stone_black" translatesAutoresizingMaskIntoConstraints="NO" id="N5V-J9-Yg6">
+                                <rect key="frame" x="230" y="80" width="20" height="20"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Player" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yUQ-Pu-oG7">
+                                <rect key="frame" x="251" y="80" width="61" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                                <color key="textColor" red="0.20000000000000001" green="0.40000000000000002" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Computer" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8jK-V8-H0X">
+                                <rect key="frame" x="251" y="100" width="61" height="20"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                                <color key="textColor" red="0.20000000000000001" green="0.40000000000000002" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="buz-qL-fzh">
+                                <rect key="frame" x="0.0" y="156" width="320" height="320"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="gomokuboard" translatesAutoresizingMaskIntoConstraints="NO" id="ZDo-3Z-cUQ">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="320"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DrN-B8-7zg">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
+                                <subviews>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bij-kS-UtM">
+                                        <rect key="frame" x="20" y="26" width="27" height="27"/>
+                                        <state key="normal" image="bn_back">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btnBackAction:" destination="epA-XS-AWG" eventType="touchUpInside" id="q06-oa-dwj"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="五子棋" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c0H-Sp-zjc">
+                                        <rect key="frame" x="110" y="28" width="100" height="24"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z7D-hW-ivD">
+                                <rect key="frame" x="20" y="84" width="32" height="32"/>
+                                <state key="normal" image="bn_soundoff">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected" image="bn_soundon"/>
+                                <connections>
+                                    <action selector="btnSoundAction:" destination="epA-XS-AWG" eventType="touchUpInside" id="gAc-G3-5fh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R1L-5B-Ntl">
+                                <rect key="frame" x="10" y="125" width="80" height="27"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                <state key="normal" title="RESTART">
+                                    <color key="titleColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnRestartAction:" destination="epA-XS-AWG" eventType="touchUpInside" id="gIJ-SP-A9O"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="osv-t2-Yum">
+                                <rect key="frame" x="240" y="125" width="73" height="27"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="UNDO(3)">
+                                    <color key="titleColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnUndoAction:" destination="epA-XS-AWG" eventType="touchUpInside" id="3lB-2n-LZE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="npR-4a-8Sq">
+                                <rect key="frame" x="115" y="85" width="117" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                <state key="normal" title="CHANGE ROLE&gt;">
+                                    <color key="titleColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnChangePlayChess:" destination="epA-XS-AWG" eventType="touchUpInside" id="fLq-e5-rrg"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <connections>
+                        <outlet property="blackChessMan" destination="yUQ-Pu-oG7" id="FT6-rL-zcb"/>
+                        <outlet property="boardView" destination="buz-qL-fzh" id="0od-ul-BDR"/>
+                        <outlet property="btnRestart" destination="R1L-5B-Ntl" id="bjD-P6-cZT"/>
+                        <outlet property="btnSound" destination="Z7D-hW-ivD" id="2SS-jb-auF"/>
+                        <outlet property="btnUndo" destination="osv-t2-Yum" id="q1F-6K-FoX"/>
+                        <outlet property="topView" destination="DrN-B8-7zg" id="eCz-aw-muC"/>
+                        <outlet property="whiteChessMan" destination="8jK-V8-H0X" id="Sos-47-CGS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="K1f-TT-1FM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="632" y="25"/>
+        </scene>
+        <!--Gomoku Over View Controller-->
+        <scene sceneID="Lf0-So-Knc">
+            <objects>
+                <viewController storyboardIdentifier="GZHGomokuOverViewController" id="6Mg-9W-iOS" customClass="GZHGomokuOverViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="XYs-du-O8U"/>
+                        <viewControllerLayoutGuide type="bottom" id="Btx-9O-2um"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="nZg-sy-exz">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8ic-ng-rQK">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fhw-ln-Msd">
+                                <rect key="frame" x="20" y="508" width="120" height="40"/>
+                                <state key="normal" title="Try Again">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnRestartAction:" destination="6Mg-9W-iOS" eventType="touchUpInside" id="pdJ-IX-4VP"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qta-H3-d3i">
+                                <rect key="frame" x="180" y="508" width="120" height="40"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnBackAction:" destination="6Mg-9W-iOS" eventType="touchUpInside" id="lC6-h0-piO"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7tq-q8-PBe">
+                                <rect key="frame" x="0.0" y="265" width="320" height="40"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" red="0.91180294750000002" green="0.28581935409999998" blue="0.25415156789999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="backView" destination="8ic-ng-rQK" id="1Vr-8P-KY1"/>
+                        <outlet property="btnBack" destination="Qta-H3-d3i" id="3kU-Ts-TQj"/>
+                        <outlet property="btnRetart" destination="Fhw-ln-Msd" id="tOP-Mn-6iV"/>
+                        <outlet property="labelAlert" destination="7tq-q8-PBe" id="v0T-2q-kED"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yBb-H0-P5D" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="701" y="70"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="bn_back" width="27" height="27"/>
+        <image name="bn_soundoff" width="32" height="32"/>
+        <image name="bn_soundon" width="32" height="32"/>
+        <image name="gomokuboard" width="1229" height="1229"/>
+        <image name="stone_black" width="80" height="80"/>
+        <image name="stone_white" width="80" height="80"/>
+    </resources>
 </document>

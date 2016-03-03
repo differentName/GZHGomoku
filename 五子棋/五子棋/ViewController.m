@@ -17,7 +17,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
 }
 - (void)viewWillAppear:(BOOL)animated
 {
@@ -27,17 +26,18 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
-{
-    
+- (IBAction)enterGame:(UIButton *)sender {
     UIStoryboard *three=[UIStoryboard storyboardWithName:@"Main" bundle:nil];
-//    [self presentViewController:[three instantiateViewControllerWithIdentifier:@"GZHGomokuGameSencesViewController"] animated:YES completion:nil];
     
     [self.navigationController pushViewController:[three instantiateViewControllerWithIdentifier:@"GZHGomokuGameSencesViewController"] animated:YES];
-    
-//    [UIApplication sharedApplication].keyWindow.rootViewController = [three instantiateViewControllerWithIdentifier:@"GZHGomokuGameSencesViewController"];
+}
 
+//隐藏状态栏
+- (BOOL)prefersStatusBarHidden
+{
+    // iOS7后,[[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:UIStatusBarAnimationFade];
+    // 已经不起作用了
+    return YES;
 }
 
 @end

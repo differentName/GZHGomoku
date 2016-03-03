@@ -121,8 +121,12 @@
         [self.game reStart];
     }
 }
+//点击了返回按钮
 -(IBAction)btnBackAction:(id)sender
-{}
+{
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
 -(IBAction)btnSoundAction:(id)sender
 {
     self.btnSound.selected=!self.btnSound.selected;

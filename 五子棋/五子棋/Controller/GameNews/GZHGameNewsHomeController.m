@@ -46,20 +46,23 @@
     self.category_id = 446;
     self.page = 1;
     
-    //请求新闻数据
-    [GZHHttpTool get:@"http://112.124.20.32:9999/web_manage/api/news_list.do?admin_id=152" params:@{@"category_id":[NSString stringWithFormat:@"%d",self.category_id ],@"page":[NSString stringWithFormat:@"%d",self.page]} success:^(id json) {
-//                NSLog(@"%@",json);
-        [self.dataAry addObjectsFromArray:[GZHNewsModel objectArrayWithKeyValuesArray:json[@"data"]]];
-    
-        [MBProgressHUD hideHUD];
-        
-        [self.tableView reloadData];
-    } failure:^(NSError *error) {
-        NSLog(@"%@",error);
-        
-        [MBProgressHUD hideHUD];
-        [MBProgressHUD showError:@"数据异常"];
-    }];
+    //请求新闻数据 //子线程请求网络数据避免阻塞
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        [GZHHttpTool get:@"http://112.124.20.32:9999/web_manage/api/news_list.do?admin_id=152" params:@{@"category_id":[NSString stringWithFormat:@"%d",self.category_id ],@"page":[NSString stringWithFormat:@"%d",self.page]} success:^(id json) {
+            //                NSLog(@"%@",json);
+            [self.dataAry addObjectsFromArray:[GZHNewsModel objectArrayWithKeyValuesArray:json[@"data"]]];
+            
+            [MBProgressHUD hideHUD];
+            
+            [self.tableView reloadData];
+        } failure:^(NSError *error) {
+            NSLog(@"%@",error);
+            
+            [MBProgressHUD hideHUD];
+            [MBProgressHUD showError:@"数据异常"];
+        }];
+
+    });
     
     //设置导航栏标题
     self.title = @"五子趣闻";

@@ -1,0 +1,48 @@
+这个第三方类库可以用来table的上拉刷新和下拉加载的  可以自定义上下拉刷新的文字说明 
+使用示范：
+
+@implementation ViewController
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    UITableView *table = [[UITableView alloc]init];
+    self.table = table;
+    table.frame = self.view.bounds;
+    [self.view addSubview:table];
+    
+    //已进入程序就开始下拉刷新
+    [table headerBeginRefreshing];
+    //添加下拉刷新  刷新时调用head方法
+    [table addHeaderWithTarget:self action:@selector(head)];
+    //设置下拉刷新过程中正在请求刷新过程时的文字
+    table.headerRefreshingText = @"拼命刷新中";
+    //设置下拉刷新过程中已达到刷新位置时显示的文字
+    table.headerReleaseToRefreshText = @"qq";
+    //设置下拉刷新过程中还未达到刷新位置时显示的文字
+    table.headerPullToRefreshText = @"fdfd";
+    
+    //添加上拉加载更多  加载时调用foot方法
+    [table addFooterWithTarget:self action:@selector(foot)];
+    table.footerRefreshingText = @"加载更多中";
+    table.footerPullToRefreshText = @"ss";
+    table.footerReleaseToRefreshText = @"aaa";
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+- (void)head
+{
+    NSLog(@"head");
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self.table headerEndRefreshing];
+    });
+}
+- (void)foot{
+    NSLog(@"foot");
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self.table footerEndRefreshing];
+    });
+}
+@end

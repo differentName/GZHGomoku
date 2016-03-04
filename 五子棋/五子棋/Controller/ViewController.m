@@ -9,8 +9,9 @@
 #import "ViewController.h"
 #import "GZHGomokuGameSencesViewController.h"
 #import "GZHGomokuOverViewController.h"
+#import "GZHHttpTool.h"
+#import "GZHGameNewsHomeController.h"
 @interface ViewController ()
-
 @end
 
 @implementation ViewController
@@ -30,6 +31,13 @@
     UIStoryboard *three=[UIStoryboard storyboardWithName:@"Main" bundle:nil];
     
     [self.navigationController pushViewController:[three instantiateViewControllerWithIdentifier:@"GZHGomokuGameSencesViewController"] animated:YES];
+}
+- (IBAction)konwologe:(UIButton *)sender {
+    GZHGameNewsHomeController *newsController = [[GZHGameNewsHomeController alloc]init];
+    [self.navigationController pushViewController:newsController animated:YES];
+}
+
+- (IBAction)gameSetting:(UIButton *)sender {
 }
 
 //隐藏状态栏

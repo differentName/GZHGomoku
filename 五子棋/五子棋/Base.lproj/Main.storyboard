@@ -54,6 +54,9 @@
                                 <state key="normal" title="游戏设置" backgroundImage="btnBgimg">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="gameSetting:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bvu-NL-Lg3"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tPV-4N-QAN">
                                 <rect key="frame" x="182" y="240" width="236" height="100"/>
@@ -65,6 +68,9 @@
                                 <state key="normal" title="五子趣闻" backgroundImage="btnBgimg">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="konwologe:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yeY-Xf-XuG"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="Hyy-yJ-QdN">
                                 <rect key="frame" x="231" y="547" width="137" height="53"/>

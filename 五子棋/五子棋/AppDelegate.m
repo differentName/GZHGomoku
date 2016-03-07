@@ -24,13 +24,13 @@
     [NSThread sleepForTimeInterval:1.5];
     
     //友盟社会化分享
-    [UMSocialData setAppKey:@"564015d9e0f55a210900144b"];
-    [UMSocialWechatHandler setWXAppId:@"wx8c34cdcbfd708b3b" appSecret:@"d4624c36b6795d1d99dcf0547af5443d" url:@"http://www.doyutown.com/"];
+    [UMSocialData setAppKey:@"56dcfeec67e58e6f530020d5"];
+    [UMSocialWechatHandler setWXAppId:@"wxcbc6a6dacb710eb7" appSecret:@"6d0392a072cc19a44832ab54f82fe6cb" url:@"http://www.baidu.com"];
     //    wx98658a977b1dfbd0
-    [UMSocialQQHandler setQQWithAppId:@"1104877871" appKey:@"NUrqDBic8ISzb2uC" url:@"http://www.doyutown.com/"];
+    [UMSocialQQHandler setQQWithAppId:@"1105159385" appKey:@"jzmmLGxMw4j4uH6Q" url:@"http://www.baidu.com"];
     
     //友盟分析
-    [MobClick startWithAppkey:@"564015d9e0f55a210900144b" reportPolicy:BATCH   channelId:@""];
+    [MobClick startWithAppkey:@"56dcfeec67e58e6f530020d5" reportPolicy:BATCH   channelId:@""];
 
     return YES;
 }

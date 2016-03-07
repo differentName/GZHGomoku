@@ -7,7 +7,11 @@
 //
 
 #import "AppDelegate.h"
-
+#import "UMSocial.h"
+#import "UMSocialWechatHandler.h"
+#import "UMSocialQQHandler.h"
+#import "MobClick.h"
+#import "MobClickSocialAnalytics.h"
 @interface AppDelegate ()
 
 @end
@@ -16,9 +20,18 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    
-    // Override point for customization after application launch.
+    //启动界面延迟1.5秒
     [NSThread sleepForTimeInterval:1.5];
+    
+    //友盟社会化分享
+    [UMSocialData setAppKey:@"564015d9e0f55a210900144b"];
+    [UMSocialWechatHandler setWXAppId:@"wx8c34cdcbfd708b3b" appSecret:@"d4624c36b6795d1d99dcf0547af5443d" url:@"http://www.doyutown.com/"];
+    //    wx98658a977b1dfbd0
+    [UMSocialQQHandler setQQWithAppId:@"1104877871" appKey:@"NUrqDBic8ISzb2uC" url:@"http://www.doyutown.com/"];
+    
+    //友盟分析
+    [MobClick startWithAppkey:@"564015d9e0f55a210900144b" reportPolicy:BATCH   channelId:@""];
+
     return YES;
 }
 

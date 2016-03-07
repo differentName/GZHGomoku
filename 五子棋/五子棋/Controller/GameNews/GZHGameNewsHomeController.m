@@ -69,6 +69,21 @@
     
     //设置上拉加载
     [self.tableView addFooterWithTarget:self action:@selector(loadMore)];
+    
+    //设置返回按钮
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"bn_back"] style:UIBarButtonItemStyleDone target:self action:@selector(back)];
+    
+    //设置导航栏背景颜色图片
+    [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"bg_black"] forBarPosition:UIBarPositionAny barMetrics:UIBarMetricsDefault];
+    
+    //设置导航栏标题字体大小及颜色
+    [self.navigationController.navigationBar setTitleTextAttributes:
+  @{NSFontAttributeName:[UIFont boldSystemFontOfSize:17],
+    NSForegroundColorAttributeName:[UIColor whiteColor]}];
+}
+//返回上层界面
+- (void)back{
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void)viewDidDisappear:(BOOL)animated
@@ -81,6 +96,7 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    
     self.navigationController.navigationBarHidden = NO;
 }
 
@@ -142,6 +158,8 @@
             cell.selectionStyle = UITableViewCellSelectionStyleNone;
             cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
         }
+        cell.imageView.image = [UIImage imageNamed:@"cellIcon"];
+        cell.textLabel.font = [UIFont systemFontOfSize:14];
         GZHNewsModel *new = self.dataAry[indexPath.row];
         cell.textLabel.text = new.title;
         return cell;

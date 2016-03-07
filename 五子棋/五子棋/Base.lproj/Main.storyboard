@@ -38,34 +38,26 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="main_bgImage" translatesAutoresizingMaskIntoConstraints="NO" id="WUU-VW-Mgn">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oVt-NI-RaG">
-                                <rect key="frame" x="182" y="120" width="236" height="100"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
-                                <state key="normal" title="进入游戏" backgroundImage="btnBgimg">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="enterGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YwA-GU-m5b"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kDr-KL-ZpH">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kDr-KL-ZpH">
                                 <rect key="frame" x="182" y="360" width="236" height="100"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
-                                <state key="normal" title="游戏设置" backgroundImage="btnBgimg">
+                                <inset key="titleEdgeInsets" minX="5" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <inset key="imageEdgeInsets" minX="-10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="游戏设置" image="main_setting" backgroundImage="btnBgimg">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="gameSetting:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bvu-NL-Lg3"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tPV-4N-QAN">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tPV-4N-QAN">
                                 <rect key="frame" x="182" y="240" width="236" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="236" id="11H-YY-Jnm"/>
                                     <constraint firstAttribute="height" constant="100" id="dpt-qj-XpR"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
-                                <state key="normal" title="五子趣闻" backgroundImage="btnBgimg">
+                                <inset key="titleEdgeInsets" minX="5" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <inset key="imageEdgeInsets" minX="-10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="五子趣闻" image="main_news" backgroundImage="btnBgimg">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -86,6 +78,17 @@
                                     <constraint firstAttribute="width" constant="50" id="45e-AR-LiA"/>
                                 </constraints>
                                 <state key="normal" image="sidebar_icon"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oVt-NI-RaG">
+                                <rect key="frame" x="182" y="120" width="236" height="100"/>
+                                <inset key="titleEdgeInsets" minX="5" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <inset key="imageEdgeInsets" minX="-10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="进入游戏" image="main_game" backgroundImage="btnBgimg">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="enterGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YwA-GU-m5b"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -128,120 +131,162 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="stone_white" translatesAutoresizingMaskIntoConstraints="NO" id="nlZ-Y1-sn4">
-                                <rect key="frame" x="230" y="99" width="20" height="20"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background10" translatesAutoresizingMaskIntoConstraints="NO" id="Pe0-EP-VcE">
+                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                                <color key="backgroundColor" red="0.14117647059999999" green="0.52941176469999995" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="stone_black" translatesAutoresizingMaskIntoConstraints="NO" id="N5V-J9-Yg6">
-                                <rect key="frame" x="230" y="80" width="20" height="20"/>
-                            </imageView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Player" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yUQ-Pu-oG7">
-                                <rect key="frame" x="251" y="80" width="61" height="21"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
-                                <color key="textColor" red="0.20000000000000001" green="0.40000000000000002" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Computer" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8jK-V8-H0X">
-                                <rect key="frame" x="251" y="100" width="61" height="20"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
-                                <color key="textColor" red="0.20000000000000001" green="0.40000000000000002" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="buz-qL-fzh">
-                                <rect key="frame" x="0.0" y="156" width="320" height="320"/>
+                            <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="buz-qL-fzh">
+                                <rect key="frame" x="140" y="100" width="320" height="320"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="gomokuboard" translatesAutoresizingMaskIntoConstraints="NO" id="ZDo-3Z-cUQ">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chessboardBg" translatesAutoresizingMaskIntoConstraints="NO" id="ZDo-3Z-cUQ">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="320"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="320" id="2aq-lS-GyT"/>
+                                            <constraint firstAttribute="height" constant="320" id="DbY-QX-mh7"/>
+                                        </constraints>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="ZDo-3Z-cUQ" firstAttribute="centerX" secondItem="buz-qL-fzh" secondAttribute="centerX" id="C4c-aC-HEd"/>
+                                    <constraint firstAttribute="height" constant="320" id="aM9-Qi-xsb"/>
+                                    <constraint firstAttribute="width" constant="320" id="hWd-vW-BAw"/>
+                                    <constraint firstItem="ZDo-3Z-cUQ" firstAttribute="top" secondItem="buz-qL-fzh" secondAttribute="top" id="jiZ-bC-e2p"/>
+                                </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DrN-B8-7zg">
-                                <rect key="frame" x="0.0" y="-20" width="600" height="64"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jaO-H4-114">
+                                <rect key="frame" x="0.0" y="20" width="600" height="80"/>
                                 <subviews>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="五子棋" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c0H-Sp-zjc">
-                                        <rect key="frame" x="258" y="20.5" width="84" height="33.5"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stone_white" translatesAutoresizingMaskIntoConstraints="NO" id="nlZ-Y1-sn4">
+                                        <rect key="frame" x="529" y="29" width="20" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="20" id="0YO-KB-eCj"/>
+                                            <constraint firstAttribute="height" constant="20" id="f7b-Oq-tU0"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stone_black" translatesAutoresizingMaskIntoConstraints="NO" id="N5V-J9-Yg6">
+                                        <rect key="frame" x="529" y="3" width="20" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="M63-1R-mbo"/>
+                                            <constraint firstAttribute="width" constant="20" id="sMg-Pl-sVU"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="用户" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yUQ-Pu-oG7">
+                                        <rect key="frame" x="554" y="5" width="26" height="16"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                                        <color key="textColor" red="0.20000000000000001" green="0.40000000000000002" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bij-kS-UtM">
-                                        <rect key="frame" x="10" y="23" width="27" height="27"/>
-                                        <state key="normal" image="bn_back">
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="电脑" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8jK-V8-H0X">
+                                        <rect key="frame" x="554" y="31" width="26" height="16"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                                        <color key="textColor" red="0.20000000000000001" green="0.40000000000000002" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R1L-5B-Ntl">
+                                        <rect key="frame" x="15" y="57" width="56" height="29"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                        <state key="normal" title="重新开始">
+                                            <color key="titleColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <action selector="btnBackAction:" destination="epA-XS-AWG" eventType="touchUpInside" id="DYd-Fb-JhJ"/>
+                                            <action selector="btnRestartAction:" destination="epA-XS-AWG" eventType="touchUpInside" id="gIJ-SP-A9O"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="osv-t2-Yum">
+                                        <rect key="frame" x="528" y="57" width="52" height="30"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" title="悔棋(3)">
+                                            <color key="titleColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btnUndoAction:" destination="epA-XS-AWG" eventType="touchUpInside" id="3lB-2n-LZE"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="npR-4a-8Sq">
+                                        <rect key="frame" x="471" y="11" width="38" height="29"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                        <state key="normal" title="切换&gt;">
+                                            <color key="titleColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btnChangePlayChess:" destination="epA-XS-AWG" eventType="touchUpInside" id="fLq-e5-rrg"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z7D-hW-ivD">
+                                        <rect key="frame" x="15" y="10" width="32" height="32"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="32" id="URQ-F2-8OH"/>
+                                            <constraint firstAttribute="width" constant="32" id="WUI-GW-gdG"/>
+                                        </constraints>
+                                        <state key="normal" image="bn_soundoff">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="selected" image="bn_soundon"/>
+                                        <connections>
+                                            <action selector="btnSoundAction:" destination="epA-XS-AWG" eventType="touchUpInside" id="gAc-G3-5fh"/>
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="Bij-kS-UtM" firstAttribute="leading" secondItem="DrN-B8-7zg" secondAttribute="leading" constant="10" id="9IE-jh-IIg"/>
-                                    <constraint firstItem="Bij-kS-UtM" firstAttribute="centerY" secondItem="DrN-B8-7zg" secondAttribute="centerY" constant="5" id="M2S-Tn-mgF"/>
-                                    <constraint firstItem="c0H-Sp-zjc" firstAttribute="centerX" secondItem="DrN-B8-7zg" secondAttribute="centerX" id="eLU-Zw-z4o"/>
-                                    <constraint firstItem="c0H-Sp-zjc" firstAttribute="centerY" secondItem="DrN-B8-7zg" secondAttribute="centerY" constant="5" id="eT5-ux-SFQ"/>
-                                    <constraint firstAttribute="height" constant="64" id="oxh-pt-m90"/>
+                                    <constraint firstItem="yUQ-Pu-oG7" firstAttribute="centerY" secondItem="N5V-J9-Yg6" secondAttribute="centerY" id="0xv-bh-yBz"/>
+                                    <constraint firstItem="R1L-5B-Ntl" firstAttribute="centerX" secondItem="Z7D-hW-ivD" secondAttribute="centerX" id="3eK-FA-vb7"/>
+                                    <constraint firstAttribute="trailing" secondItem="yUQ-Pu-oG7" secondAttribute="trailing" constant="20" id="4ea-jo-P9p"/>
+                                    <constraint firstAttribute="trailing" secondItem="osv-t2-Yum" secondAttribute="trailing" constant="20" id="4oN-N9-nRL"/>
+                                    <constraint firstItem="R1L-5B-Ntl" firstAttribute="leading" secondItem="Z7D-hW-ivD" secondAttribute="leading" id="9MY-VW-fYL"/>
+                                    <constraint firstItem="osv-t2-Yum" firstAttribute="top" secondItem="8jK-V8-H0X" secondAttribute="bottom" constant="10" id="BI6-rd-eDj"/>
+                                    <constraint firstItem="yUQ-Pu-oG7" firstAttribute="top" secondItem="jaO-H4-114" secondAttribute="top" constant="5" id="MuM-aA-dL7"/>
+                                    <constraint firstItem="8jK-V8-H0X" firstAttribute="trailing" secondItem="yUQ-Pu-oG7" secondAttribute="trailing" id="ORq-HS-6HJ"/>
+                                    <constraint firstItem="8jK-V8-H0X" firstAttribute="leading" secondItem="nlZ-Y1-sn4" secondAttribute="trailing" constant="5" id="OpR-hF-sxH"/>
+                                    <constraint firstItem="8jK-V8-H0X" firstAttribute="leading" secondItem="yUQ-Pu-oG7" secondAttribute="leading" id="Plu-Fa-DI2"/>
+                                    <constraint firstItem="npR-4a-8Sq" firstAttribute="centerY" secondItem="jaO-H4-114" secondAttribute="centerY" id="Pmp-0b-3Vs"/>
+                                    <constraint firstItem="yUQ-Pu-oG7" firstAttribute="leading" secondItem="N5V-J9-Yg6" secondAttribute="trailing" constant="5" id="STb-Tv-DRl"/>
+                                    <constraint firstItem="R1L-5B-Ntl" firstAttribute="top" secondItem="Z7D-hW-ivD" secondAttribute="bottom" constant="15" id="Ww1-JL-9Yh"/>
+                                    <constraint firstItem="Z7D-hW-ivD" firstAttribute="top" secondItem="jaO-H4-114" secondAttribute="top" constant="10" id="bff-CH-jzT"/>
+                                    <constraint firstAttribute="height" constant="80" id="ffj-o8-Dyh"/>
+                                    <constraint firstItem="8jK-V8-H0X" firstAttribute="top" secondItem="yUQ-Pu-oG7" secondAttribute="bottom" constant="10" id="gnX-UY-1qR"/>
+                                    <constraint firstItem="8jK-V8-H0X" firstAttribute="centerY" secondItem="nlZ-Y1-sn4" secondAttribute="centerY" id="jDP-tJ-Das"/>
+                                    <constraint firstItem="npR-4a-8Sq" firstAttribute="centerX" secondItem="jaO-H4-114" secondAttribute="centerX" id="n0Q-2A-W7k"/>
+                                    <constraint firstItem="nlZ-Y1-sn4" firstAttribute="top" secondItem="npR-4a-8Sq" secondAttribute="top" constant="18" id="pMn-mD-LGy"/>
+                                    <constraint firstItem="N5V-J9-Yg6" firstAttribute="leading" secondItem="npR-4a-8Sq" secondAttribute="trailing" constant="20" id="rN6-D2-MKl"/>
+                                    <constraint firstItem="8jK-V8-H0X" firstAttribute="top" secondItem="jaO-H4-114" secondAttribute="top" constant="10" id="sUY-Jj-tPh"/>
+                                    <constraint firstItem="yUQ-Pu-oG7" firstAttribute="top" secondItem="Z7D-hW-ivD" secondAttribute="top" id="sqe-V1-mdp"/>
+                                    <constraint firstItem="Z7D-hW-ivD" firstAttribute="leading" secondItem="jaO-H4-114" secondAttribute="leading" constant="15" id="zmw-UX-1hV"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="3eK-FA-vb7"/>
+                                        <exclude reference="Pmp-0b-3Vs"/>
+                                        <exclude reference="n0Q-2A-W7k"/>
+                                        <exclude reference="sqe-V1-mdp"/>
+                                        <exclude reference="sUY-Jj-tPh"/>
+                                    </mask>
+                                </variation>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z7D-hW-ivD">
-                                <rect key="frame" x="20" y="84" width="32" height="32"/>
-                                <state key="normal" image="bn_soundoff">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="selected" image="bn_soundon"/>
-                                <connections>
-                                    <action selector="btnSoundAction:" destination="epA-XS-AWG" eventType="touchUpInside" id="gAc-G3-5fh"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R1L-5B-Ntl">
-                                <rect key="frame" x="10" y="125" width="80" height="27"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
-                                <state key="normal" title="RESTART">
-                                    <color key="titleColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="btnRestartAction:" destination="epA-XS-AWG" eventType="touchUpInside" id="gIJ-SP-A9O"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="osv-t2-Yum">
-                                <rect key="frame" x="240" y="125" width="73" height="27"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="UNDO(3)">
-                                    <color key="titleColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="btnUndoAction:" destination="epA-XS-AWG" eventType="touchUpInside" id="3lB-2n-LZE"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="npR-4a-8Sq">
-                                <rect key="frame" x="115" y="85" width="117" height="30"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
-                                <state key="normal" title="CHANGE ROLE&gt;">
-                                    <color key="titleColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="btnChangePlayChess:" destination="epA-XS-AWG" eventType="touchUpInside" id="fLq-e5-rrg"/>
-                                </connections>
-                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="DrN-B8-7zg" secondAttribute="trailing" id="cCs-Aw-kz5"/>
-                            <constraint firstItem="DrN-B8-7zg" firstAttribute="leading" secondItem="ZlJ-RG-fhc" secondAttribute="leading" id="fXP-Da-Oar"/>
-                            <constraint firstItem="DrN-B8-7zg" firstAttribute="top" secondItem="UAi-6H-jNJ" secondAttribute="bottom" constant="-20" id="m23-RH-wSu"/>
+                            <constraint firstItem="buz-qL-fzh" firstAttribute="top" secondItem="jaO-H4-114" secondAttribute="bottom" id="0Km-cw-yf3"/>
+                            <constraint firstItem="Pe0-EP-VcE" firstAttribute="top" secondItem="ZlJ-RG-fhc" secondAttribute="top" constant="20" id="0Vb-hh-E5e"/>
+                            <constraint firstItem="Pe0-EP-VcE" firstAttribute="leading" secondItem="ZlJ-RG-fhc" secondAttribute="leading" id="2L0-ct-Bj1"/>
+                            <constraint firstItem="buz-qL-fzh" firstAttribute="centerX" secondItem="ZlJ-RG-fhc" secondAttribute="centerX" id="4r0-VU-p7w"/>
+                            <constraint firstItem="jaO-H4-114" firstAttribute="leading" secondItem="ZlJ-RG-fhc" secondAttribute="leading" id="NSI-Kn-K8Z"/>
+                            <constraint firstAttribute="trailing" secondItem="Pe0-EP-VcE" secondAttribute="trailing" id="NoG-Ea-i61"/>
+                            <constraint firstAttribute="bottom" secondItem="Pe0-EP-VcE" secondAttribute="bottom" id="Ysp-bv-jod"/>
+                            <constraint firstAttribute="trailing" secondItem="jaO-H4-114" secondAttribute="trailing" id="eSC-Uv-X67"/>
+                            <constraint firstItem="jaO-H4-114" firstAttribute="top" secondItem="UAi-6H-jNJ" secondAttribute="bottom" id="wFg-ZR-Hru"/>
                         </constraints>
                     </view>
-                    <nil key="simulatedStatusBarMetrics"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
                     <connections>
                         <outlet property="blackChessMan" destination="yUQ-Pu-oG7" id="FT6-rL-zcb"/>
                         <outlet property="boardView" destination="buz-qL-fzh" id="0od-ul-BDR"/>
                         <outlet property="btnRestart" destination="R1L-5B-Ntl" id="bjD-P6-cZT"/>
                         <outlet property="btnSound" destination="Z7D-hW-ivD" id="2SS-jb-auF"/>
                         <outlet property="btnUndo" destination="osv-t2-Yum" id="q1F-6K-FoX"/>
-                        <outlet property="topView" destination="DrN-B8-7zg" id="eCz-aw-muC"/>
                         <outlet property="whiteChessMan" destination="8jK-V8-H0X" id="Sos-47-CGS"/>
                     </connections>
                 </viewController>
@@ -306,13 +351,16 @@
         </scene>
     </scenes>
     <resources>
-        <image name="bn_back" width="27" height="27"/>
+        <image name="background10" width="480" height="800"/>
         <image name="bn_soundoff" width="32" height="32"/>
         <image name="bn_soundon" width="32" height="32"/>
         <image name="btnBgimg" width="424" height="231"/>
-        <image name="gomokuboard" width="1229" height="1229"/>
+        <image name="chessboardBg" width="1229" height="1229"/>
         <image name="logo" width="274" height="106"/>
         <image name="main_bgImage" width="640" height="960"/>
+        <image name="main_game" width="25" height="25"/>
+        <image name="main_news" width="25" height="25"/>
+        <image name="main_setting" width="25" height="25"/>
         <image name="sidebar_icon" width="22" height="22"/>
         <image name="stone_black" width="80" height="80"/>
         <image name="stone_white" width="80" height="80"/>

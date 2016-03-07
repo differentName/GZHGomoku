@@ -48,10 +48,10 @@
     self.game=[GZHGomokuGameEngine game];
     self.game.delegate=self;
     self.game.playerFirst=YES;
-    self.view.backgroundColor=[UIColor colorWithIntegerValue:BACKGROUND_COLOR alpha:1];
+//    self.view.backgroundColor=[UIColor colorWithIntegerValue:BACKGROUND_COLOR alpha:1];
     
     UIColor * color=[UIColor colorWithPatternImage:[UIImage imageNamed:@"topbarbg_2"]];
-    self.topView.backgroundColor=color;
+//    self.topView.backgroundColor=color;
     self.blackChessMan.textColor=color;
     self.whiteChessMan.textColor=color;
     
@@ -65,16 +65,48 @@
         self.game.playerFirst=number.boolValue;
     }
     if (!self.game.playerFirst) {
-        self.blackChessMan.text=@"Computer";
-        self.whiteChessMan.text=@"Player";
+        self.blackChessMan.text=@"电脑";
+        self.whiteChessMan.text=@"用户";
     }else{
-        self.blackChessMan.text=@"Player";
-        self.whiteChessMan.text=@"Computer";
+        self.blackChessMan.text=@"用户";
+        self.whiteChessMan.text=@"电脑";
     }
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [self.game begin];
     });
+
+    
+    //设置返回按钮
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"bn_back"] style:UIBarButtonItemStyleDone target:self action:@selector(back)];
+    
+    self.title = @"五子棋";
+    
+    //设置导航栏背景颜色图片
+    [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"bg_black"] forBarPosition:UIBarPositionAny barMetrics:UIBarMetricsDefault];
+    
+    //设置导航栏标题字体大小及颜色
+    [self.navigationController.navigationBar setTitleTextAttributes:
+     @{NSFontAttributeName:[UIFont boldSystemFontOfSize:17],
+       NSForegroundColorAttributeName:[UIColor whiteColor]}];
 }
+//返回上层界面
+- (void)back{
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    self.navigationController.navigationBarHidden = NO;
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    self.navigationController.navigationBarHidden = YES;
+}
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -109,12 +141,12 @@
     if (self.game.gameStatu!=GZHGameStatuComputerChessing) {
         if (self.game.playerFirst) {
             self.game.playerFirst=NO;
-            self.blackChessMan.text=@"Computer";
-            self.whiteChessMan.text=@"Player";
+            self.blackChessMan.text=@"电脑";
+            self.whiteChessMan.text=@"用户";
         }else{
             self.game.playerFirst=YES;
-            self.blackChessMan.text=@"Player";
-            self.whiteChessMan.text=@"Computer";
+            self.blackChessMan.text=@"用户";
+            self.whiteChessMan.text=@"电脑";
         }
         NSNumber * number=[NSNumber numberWithBool:self.game.playerFirst];
         [[NSUserDefaults standardUserDefaults] setObject:number forKey:@"playerFirst"];
@@ -150,7 +182,7 @@
             self.btnUndo.enabled=YES;
             [self.btnUndo setTitleColor:[self.btnRestart titleColorForState:UIControlStateNormal] forState:UIControlStateNormal];
         }
-        [self.btnUndo setTitle:[NSString stringWithFormat:@"UNDO(%ld)",(long)(3-self.undoCount)] forState:UIControlStateNormal];
+        [self.btnUndo setTitle:[NSString stringWithFormat:@"悔棋(%ld)",(long)(3-self.undoCount)] forState:UIControlStateNormal];
     };
 }
 
@@ -222,7 +254,7 @@
         self.btnUndo.enabled=YES;
         [self.btnUndo setTitleColor:[self.btnRestart titleColorForState:UIControlStateNormal] forState:UIControlStateNormal];
     }
-    [self.btnUndo setTitle:[NSString stringWithFormat:@"UNDO(%ld)",(long)(3-self.undoCount)] forState:UIControlStateNormal];
+    [self.btnUndo setTitle:[NSString stringWithFormat:@"悔棋(%ld)",(long)(3-self.undoCount)] forState:UIControlStateNormal];
     for (GZHGomokuPieceView * view in self.pieces) {
         [view removeFromSuperview];
     }

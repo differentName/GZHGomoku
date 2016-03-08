@@ -14,6 +14,7 @@
 @property(nonatomic,weak)IBOutlet UIImageView * backView;
 @property(nonatomic,weak)IBOutlet UILabel * labelAlert;
 @property(nonatomic,weak)IBOutlet UILabel * labelMessage;
+@property (weak, nonatomic) IBOutlet UIImageView *topImage;
 @end
 
 @implementation GZHGomokuOverViewController
@@ -32,16 +33,15 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     if (self.success) {
-        self.labelAlert.text=@"Congratulations,You Won!";
+        self.labelAlert.text=@"恭喜,获得胜利!";
+        self.topImage.image = [UIImage imageNamed:@"win"];
     }else{
-        self.labelAlert.text=@"Sorry,You Lose!";
+        self.topImage.image = [UIImage imageNamed:@"lose"];
+        self.labelAlert.text=@"下次,再接再厉!";
     }
     self.view.backgroundColor=[UIColor colorWithIntegerValue:BACKGROUND_COLOR alpha:1];
     self.backView.image=self.backImage;
     
-    UIColor * color=[UIColor colorWithPatternImage:[UIImage imageNamed:@"topbarbg_2"]];
-    [self.btnBack setBackgroundColor:color];
-    [self.btnRetart setBackgroundColor:color];
 }
 
 - (void)didReceiveMemoryWarning

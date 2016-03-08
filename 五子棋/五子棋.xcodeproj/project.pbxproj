@@ -99,6 +99,9 @@
 		E6E9F9E91C86E92C006D4268 /* ___Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = E6E9F9E81C86E92C006D4268 /* ___Tests.m */; };
 		E6E9F9F41C86E92C006D4268 /* ___UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E6E9F9F31C86E92C006D4268 /* ___UITests.m */; };
 		E6E9FA021C86F2C7006D4268 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E6E9FA011C86F2C7006D4268 /* Images.xcassets */; };
+		E6EC75D71C8E733F00E02405 /* AwesomeMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = E6EC75D41C8E733F00E02405 /* AwesomeMenu.m */; };
+		E6EC75D81C8E733F00E02405 /* AwesomeMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = E6EC75D61C8E733F00E02405 /* AwesomeMenuItem.m */; };
+		E6EC75DC1C8E76A500E02405 /* UIView+AutoLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = E6EC75DB1C8E76A500E02405 /* UIView+AutoLayout.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -290,6 +293,12 @@
 		E6E9F9F31C86E92C006D4268 /* ___UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "___UITests.m"; sourceTree = "<group>"; };
 		E6E9F9F51C86E92C006D4268 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E6E9FA011C86F2C7006D4268 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		E6EC75D31C8E733F00E02405 /* AwesomeMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AwesomeMenu.h; sourceTree = "<group>"; };
+		E6EC75D41C8E733F00E02405 /* AwesomeMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AwesomeMenu.m; sourceTree = "<group>"; };
+		E6EC75D51C8E733F00E02405 /* AwesomeMenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AwesomeMenuItem.h; sourceTree = "<group>"; };
+		E6EC75D61C8E733F00E02405 /* AwesomeMenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AwesomeMenuItem.m; sourceTree = "<group>"; };
+		E6EC75DA1C8E76A500E02405 /* UIView+AutoLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+AutoLayout.h"; sourceTree = "<group>"; };
+		E6EC75DB1C8E76A500E02405 /* UIView+AutoLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+AutoLayout.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -342,6 +351,8 @@
 		E6E34FAA1C8813B300E2FE1F /* thirdPart */ = {
 			isa = PBXGroup;
 			children = (
+				E6EC75D91C8E76A500E02405 /* UIView-AutoLayout-master */,
+				E6EC75D21C8E733F00E02405 /* AwesomeMenu(天女散花效果的菜单) */,
 				E6E3512B1C89F28500E2FE1F /* share */,
 				E6E351201C89F18100E2FE1F /* UMAnalytics_Sdk */,
 				E6E350E81C89F0A800E2FE1F /* umeng_ios_social_sdk_4.2.5_arm64_custom */,
@@ -726,6 +737,26 @@
 			path = "五子棋UITests";
 			sourceTree = "<group>";
 		};
+		E6EC75D21C8E733F00E02405 /* AwesomeMenu(天女散花效果的菜单) */ = {
+			isa = PBXGroup;
+			children = (
+				E6EC75D31C8E733F00E02405 /* AwesomeMenu.h */,
+				E6EC75D41C8E733F00E02405 /* AwesomeMenu.m */,
+				E6EC75D51C8E733F00E02405 /* AwesomeMenuItem.h */,
+				E6EC75D61C8E733F00E02405 /* AwesomeMenuItem.m */,
+			);
+			path = "AwesomeMenu(天女散花效果的菜单)";
+			sourceTree = "<group>";
+		};
+		E6EC75D91C8E76A500E02405 /* UIView-AutoLayout-master */ = {
+			isa = PBXGroup;
+			children = (
+				E6EC75DA1C8E76A500E02405 /* UIView+AutoLayout.h */,
+				E6EC75DB1C8E76A500E02405 /* UIView+AutoLayout.m */,
+			);
+			path = "UIView-AutoLayout-master";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -883,6 +914,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E6E34FC31C8813CA00E2FE1F /* AFSecurityPolicy.m in Sources */,
+				E6EC75D81C8E733F00E02405 /* AwesomeMenuItem.m in Sources */,
 				E6E34FC01C8813CA00E2FE1F /* AFHTTPRequestOperationManager.m in Sources */,
 				E6E34FFE1C8816B100E2FE1F /* MJRefreshBaseView.m in Sources */,
 				E6E350B91C8830C000E2FE1F /* GZHNewDetailController.m in Sources */,
@@ -914,6 +946,7 @@
 				E6E3508F1C881EC300E2FE1F /* GZHGomokuChessElement.m in Sources */,
 				E6E350011C8816B100E2FE1F /* MJRefreshHeaderView.m in Sources */,
 				E6E350531C881E4100E2FE1F /* MJPropertyType.m in Sources */,
+				E6EC75DC1C8E76A500E02405 /* UIView+AutoLayout.m in Sources */,
 				E6E350551C881E4100E2FE1F /* NSObject+MJCoding.m in Sources */,
 				E6E351311C89F28500E2FE1F /* CLView.m in Sources */,
 				E6E350951C881EC300E2FE1F /* GZHGomokuLinePoints.m in Sources */,
@@ -930,6 +963,7 @@
 				E6E9F9D01C86E92C006D4268 /* main.m in Sources */,
 				E6E34FC21C8813CA00E2FE1F /* AFNetworkReachabilityManager.m in Sources */,
 				E6E350961C881EC300E2FE1F /* GZHGomokuOverViewController.m in Sources */,
+				E6EC75D71C8E733F00E02405 /* AwesomeMenu.m in Sources */,
 				E6E350581C881E4100E2FE1F /* NSString+MJExtension.m in Sources */,
 				E6E3504F1C881E4100E2FE1F /* MJExtensionConst.m in Sources */,
 				E6E3504E1C881E4100E2FE1F /* MJDictionaryCache.m in Sources */,

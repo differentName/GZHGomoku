@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		19935C0B8F44519F66D4B5A0 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B7EBD41BB643891110CDD878 /* libPods.a */; };
 		E6E34FA91C88133A00E2FE1F /* GZHHttpTool.m in Sources */ = {isa = PBXBuildFile; fileRef = E6E34FA81C88133A00E2FE1F /* GZHHttpTool.m */; };
 		E6E34FBF1C8813CA00E2FE1F /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = E6E34FAD1C8813CA00E2FE1F /* AFHTTPRequestOperation.m */; };
 		E6E34FC01C8813CA00E2FE1F /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E6E34FAF1C8813CA00E2FE1F /* AFHTTPRequestOperationManager.m */; };
@@ -102,6 +103,11 @@
 		E6EC75D71C8E733F00E02405 /* AwesomeMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = E6EC75D41C8E733F00E02405 /* AwesomeMenu.m */; };
 		E6EC75D81C8E733F00E02405 /* AwesomeMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = E6EC75D61C8E733F00E02405 /* AwesomeMenuItem.m */; };
 		E6EC75DC1C8E76A500E02405 /* UIView+AutoLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = E6EC75DB1C8E76A500E02405 /* UIView+AutoLayout.m */; };
+		E6F2EC0A1C9008D200761CCB /* GZHAboutMeController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6F2EC081C9008D200761CCB /* GZHAboutMeController.m */; };
+		E6F2EC0B1C9008D200761CCB /* GZHAboutMeController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6F2EC091C9008D200761CCB /* GZHAboutMeController.xib */; };
+		E6F2EC0F1C90146900761CCB /* GZHShareGameController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6F2EC0D1C90146900761CCB /* GZHShareGameController.m */; };
+		E6F2EC101C90146900761CCB /* GZHShareGameController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6F2EC0E1C90146900761CCB /* GZHShareGameController.xib */; };
+		E6F2EC141C901F5600761CCB /* GZHRightCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E6F2EC131C901F5600761CCB /* GZHRightCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -122,6 +128,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2BC39F85C9F17AFF8EE6BAEB /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		2D4A628CC7016298728A857D /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		B7EBD41BB643891110CDD878 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6E34FA71C88133A00E2FE1F /* GZHHttpTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GZHHttpTool.h; sourceTree = "<group>"; };
 		E6E34FA81C88133A00E2FE1F /* GZHHttpTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GZHHttpTool.m; sourceTree = "<group>"; };
 		E6E34FAC1C8813CA00E2FE1F /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
@@ -299,6 +308,14 @@
 		E6EC75D61C8E733F00E02405 /* AwesomeMenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AwesomeMenuItem.m; sourceTree = "<group>"; };
 		E6EC75DA1C8E76A500E02405 /* UIView+AutoLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+AutoLayout.h"; sourceTree = "<group>"; };
 		E6EC75DB1C8E76A500E02405 /* UIView+AutoLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+AutoLayout.m"; sourceTree = "<group>"; };
+		E6F2EC071C9008D200761CCB /* GZHAboutMeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GZHAboutMeController.h; sourceTree = "<group>"; };
+		E6F2EC081C9008D200761CCB /* GZHAboutMeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GZHAboutMeController.m; sourceTree = "<group>"; };
+		E6F2EC091C9008D200761CCB /* GZHAboutMeController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GZHAboutMeController.xib; sourceTree = "<group>"; };
+		E6F2EC0C1C90146900761CCB /* GZHShareGameController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GZHShareGameController.h; sourceTree = "<group>"; };
+		E6F2EC0D1C90146900761CCB /* GZHShareGameController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GZHShareGameController.m; sourceTree = "<group>"; };
+		E6F2EC0E1C90146900761CCB /* GZHShareGameController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GZHShareGameController.xib; sourceTree = "<group>"; };
+		E6F2EC121C901F5600761CCB /* GZHRightCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GZHRightCell.h; sourceTree = "<group>"; };
+		E6F2EC131C901F5600761CCB /* GZHRightCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GZHRightCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -315,6 +332,7 @@
 				E6E351241C89F18100E2FE1F /* libMobClickLibrary.a in Frameworks */,
 				E6E351111C89F0A800E2FE1F /* libUMSocial_Sdk_4.2.5.a in Frameworks */,
 				E6E3511F1C89F0A800E2FE1F /* libWeChatSDK.a in Frameworks */,
+				19935C0B8F44519F66D4B5A0 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -335,6 +353,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3989BC1320B0A7BCD3058A8C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B7EBD41BB643891110CDD878 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E200E867765C5F77C71745DF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2BC39F85C9F17AFF8EE6BAEB /* Pods.debug.xcconfig */,
+				2D4A628CC7016298728A857D /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		E6E34FA61C88133300E2FE1F /* tools */ = {
 			isa = PBXGroup;
 			children = (
@@ -440,6 +475,8 @@
 		E6E350291C881E2200E2FE1F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E6F2EC121C901F5600761CCB /* GZHRightCell.h */,
+				E6F2EC131C901F5600761CCB /* GZHRightCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -546,6 +583,12 @@
 		E6E3508B1C881EC300E2FE1F /* GameSetting */ = {
 			isa = PBXGroup;
 			children = (
+				E6F2EC071C9008D200761CCB /* GZHAboutMeController.h */,
+				E6F2EC081C9008D200761CCB /* GZHAboutMeController.m */,
+				E6F2EC091C9008D200761CCB /* GZHAboutMeController.xib */,
+				E6F2EC0C1C90146900761CCB /* GZHShareGameController.h */,
+				E6F2EC0D1C90146900761CCB /* GZHShareGameController.m */,
+				E6F2EC0E1C90146900761CCB /* GZHShareGameController.xib */,
 			);
 			path = GameSetting;
 			sourceTree = "<group>";
@@ -679,6 +722,8 @@
 				E6E9F9E71C86E92C006D4268 /* 五子棋Tests */,
 				E6E9F9F21C86E92C006D4268 /* 五子棋UITests */,
 				E6E9F9CC1C86E92C006D4268 /* Products */,
+				E200E867765C5F77C71745DF /* Pods */,
+				3989BC1320B0A7BCD3058A8C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -764,9 +809,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E6E9F9F81C86E92C006D4268 /* Build configuration list for PBXNativeTarget "五子棋" */;
 			buildPhases = (
+				1AC9F448E30D93E0AB039351 /* Check Pods Manifest.lock */,
 				E6E9F9C71C86E92C006D4268 /* Sources */,
 				E6E9F9C81C86E92C006D4268 /* Frameworks */,
 				E6E9F9C91C86E92C006D4268 /* Resources */,
+				FE70BA13A3F6BF75D3168A82 /* Embed Pods Frameworks */,
+				8E58F7F70B65690FBD9E8E00 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -876,11 +924,13 @@
 				E6E350691C881E9B00E2FE1F /* check.wav in Resources */,
 				E6E3511A1C89F0A800E2FE1F /* UMSocialSDKResourcesNew.bundle in Resources */,
 				E6E350BA1C8830C000E2FE1F /* GZHNewDetailController.xib in Resources */,
+				E6F2EC101C90146900761CCB /* GZHShareGameController.xib in Resources */,
 				E6E34FFD1C8816B100E2FE1F /* MJRefresh.bundle in Resources */,
 				E6E3506E1C881E9B00E2FE1F /* pipa.mp3 in Resources */,
 				E6E350661C881E9B00E2FE1F /* au_gameover.wav in Resources */,
 				E6E3506A1C881E9B00E2FE1F /* down.wav in Resources */,
 				E6E3506D1C881E9B00E2FE1F /* mode.wav in Resources */,
+				E6F2EC0B1C9008D200761CCB /* GZHAboutMeController.xib in Resources */,
 				E6E351161C89F0A800E2FE1F /* UMShareEditViewControlleriPad.xib in Resources */,
 				E6E351101C89F0A800E2FE1F /* UMSocialLocalizable.strings in Resources */,
 				E6E351121C89F0A800E2FE1F /* UMSCommentDetailController.xib in Resources */,
@@ -908,6 +958,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1AC9F448E30D93E0AB039351 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		8E58F7F70B65690FBD9E8E00 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FE70BA13A3F6BF75D3168A82 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E6E9F9C71C86E92C006D4268 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -921,6 +1019,7 @@
 				E6E350561C881E4100E2FE1F /* NSObject+MJKeyValue.m in Sources */,
 				E6E3508E1C881EC300E2FE1F /* GZHGomokuChessboard.m in Sources */,
 				E6E350511C881E4100E2FE1F /* MJProperty.m in Sources */,
+				E6F2EC141C901F5600761CCB /* GZHRightCell.m in Sources */,
 				E6E34FBF1C8813CA00E2FE1F /* AFHTTPRequestOperation.m in Sources */,
 				E6E350031C8816B100E2FE1F /* UIScrollView+MJRefresh.m in Sources */,
 				E6E350521C881E4100E2FE1F /* MJPropertyKey.m in Sources */,
@@ -928,8 +1027,10 @@
 				E6E34FC11C8813CA00E2FE1F /* AFHTTPSessionManager.m in Sources */,
 				E6E350B31C8827DB00E2FE1F /* MBProgressHUD+MJ.m in Sources */,
 				E6E3500E1C881E0C00E2FE1F /* UIColor+setting.m in Sources */,
+				E6F2EC0F1C90146900761CCB /* GZHShareGameController.m in Sources */,
 				E6E350971C881EC300E2FE1F /* GZHGomokuPieceView.m in Sources */,
 				E6E34FC41C8813CA00E2FE1F /* AFURLConnectionOperation.m in Sources */,
+				E6F2EC0A1C9008D200761CCB /* GZHAboutMeController.m in Sources */,
 				E6E34FC51C8813CA00E2FE1F /* AFURLRequestSerialization.m in Sources */,
 				E6E34FFF1C8816B100E2FE1F /* MJRefreshConst.m in Sources */,
 				E6E351301C89F28500E2FE1F /* CLAnimationView.m in Sources */,
@@ -1110,6 +1211,7 @@
 		};
 		E6E9F9F91C86E92C006D4268 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2BC39F85C9F17AFF8EE6BAEB /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -1135,6 +1237,7 @@
 		};
 		E6E9F9FA1C86E92C006D4268 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2D4A628CC7016298728A857D /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;

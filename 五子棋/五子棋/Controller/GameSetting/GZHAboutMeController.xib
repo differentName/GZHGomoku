@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GZHAboutMeController">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="about_us_bg" translatesAutoresizingMaskIntoConstraints="NO" id="G1T-Iu-H3k">
+                    <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon" translatesAutoresizingMaskIntoConstraints="NO" id="Or3-DN-nTW">
+                    <rect key="frame" x="122" y="80" width="130" height="130"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="130" id="OsG-Js-CFb"/>
+                        <constraint firstAttribute="height" constant="130" id="khZ-IT-XkK"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="五子棋 1.0.1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uqr-Ff-Z4S">
+                    <rect key="frame" x="153" y="220" width="68.5" height="16"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="copyright©2015-2016 高增洪 All Rights Reserved" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gaM-DO-GEx">
+                    <rect key="frame" x="69" y="635" width="236.5" height="12"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                    <color key="textColor" red="0.85490196080000003" green="0.85490196080000003" blue="0.85490196080000003" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="扫描或长按二维码以更多操作" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1cw-vj-IO9">
+                    <rect key="frame" x="103" y="401" width="169" height="16"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ck4-hU-Ta0">
+                    <rect key="frame" x="122" y="261" width="130" height="130"/>
+                    <state key="normal" image="icon"/>
+                    <connections>
+                        <action selector="readPic:" destination="-1" eventType="touchDown" id="cUe-bx-8Cm"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="G1T-Iu-H3k" secondAttribute="bottom" id="3c5-Of-lUb"/>
+                <constraint firstItem="G1T-Iu-H3k" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="71j-A3-1eA"/>
+                <constraint firstItem="Or3-DN-nTW" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="80" id="BMb-Cs-nHj"/>
+                <constraint firstItem="Uqr-Ff-Z4S" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="BYJ-i0-kUz"/>
+                <constraint firstItem="1cw-vj-IO9" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="DTg-hV-Xdj"/>
+                <constraint firstItem="G1T-Iu-H3k" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="EbV-uw-qP4"/>
+                <constraint firstItem="ck4-hU-Ta0" firstAttribute="height" secondItem="Or3-DN-nTW" secondAttribute="height" id="J7Q-1D-Xrx"/>
+                <constraint firstItem="Or3-DN-nTW" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="XTj-5E-sYs"/>
+                <constraint firstItem="1cw-vj-IO9" firstAttribute="top" secondItem="ck4-hU-Ta0" secondAttribute="bottom" constant="10" id="Yel-2Z-r6B"/>
+                <constraint firstItem="ck4-hU-Ta0" firstAttribute="width" secondItem="Or3-DN-nTW" secondAttribute="width" id="f55-gE-xcq"/>
+                <constraint firstAttribute="bottom" secondItem="gaM-DO-GEx" secondAttribute="bottom" constant="20" id="f7K-MV-2Mp"/>
+                <constraint firstItem="ck4-hU-Ta0" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="h9d-Uo-PxP"/>
+                <constraint firstItem="ck4-hU-Ta0" firstAttribute="top" secondItem="Uqr-Ff-Z4S" secondAttribute="bottom" constant="25" id="lvE-5a-eBA"/>
+                <constraint firstItem="gaM-DO-GEx" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="oUh-cH-lon"/>
+                <constraint firstItem="Uqr-Ff-Z4S" firstAttribute="top" secondItem="Or3-DN-nTW" secondAttribute="bottom" constant="10" id="r6u-SU-g5A"/>
+                <constraint firstAttribute="trailing" secondItem="G1T-Iu-H3k" secondAttribute="trailing" id="xox-cV-0Sc"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="about_us_bg" width="375" height="667"/>
+        <image name="icon" width="180" height="180"/>
+    </resources>
+</document>

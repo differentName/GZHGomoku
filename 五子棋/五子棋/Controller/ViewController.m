@@ -13,8 +13,12 @@
 #import "GZHGameNewsHomeController.h"
 #import "AwesomeMenu.h"
 #import "UIView+AutoLayout.h"
-
-@interface ViewController () <AwesomeMenuDelegate,UITableViewDataSource,UITableViewDelegate>
+#import "MBProgressHUD+MJ.h"
+#import <MessageUI/MessageUI.h>
+#import "GZHAboutMeController.h"
+#import "GZHShareGameController.h"
+#import "GZHRightCell.h"
+@interface ViewController () <AwesomeMenuDelegate,UITableViewDataSource,UITableViewDelegate,MFMailComposeViewControllerDelegate>
 @property (nonatomic,strong) AwesomeMenu *awesome;
 @property (assign, nonatomic) BOOL isShowClass;
 @property (nonatomic,strong) UITableView *moreTableview;
@@ -26,7 +30,7 @@
 {
     if (_titleAry == nil) {
         //右边更多操作标题与图片数组
-        _titleAry = @[@"1",@"2",@"3",@"4",@"5"];
+        _titleAry = @[@"清除缓存",@"关于我们",@"意见反馈",@"给我好评",@"分享游戏"];
     }
     return _titleAry;
 }
@@ -285,18 +289,20 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *ID = @"cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
+    GZHRightCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:ID];
+        cell = [[GZHRightCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:ID];
         cell.backgroundColor =[UIColor clearColor];
     }
     //设置cell的边框
     cell.layer.borderColor=[UIColor whiteColor].CGColor;
     cell.layer.borderWidth=0.5;
+    cell.imageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"rightIcon%d",indexPath.row+1]];
     
     cell.textLabel.text = self.titleAry[indexPath.row];
     cell.textLabel.textAlignment = NSTextAlignmentCenter;
     cell.textLabel.textColor = [UIColor whiteColor];
+    cell.textLabel.font = [UIFont systemFontOfSize:12];
     
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     
@@ -305,8 +311,74 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSLog(@"%@",self.titleAry[indexPath.row]);
+    
     [self closeRightMoreView];
+    
+    if (indexPath.row == 0) {//清除缓存
+        // 缓存文件夹的路径
+        NSString *caches = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) lastObject];
+        
+        //文件管理者
+        NSFileManager *mgr = [NSFileManager defaultManager];
+        
+        [mgr removeItemAtPath:caches error:nil];//移除文件夹
+        
+        [MBProgressHUD showMessage:@"缓存清理中"];
+        
+        NSTimer *myTimer = [NSTimer timerWithTimeInterval:1.2 target:self selector:@selector(timerFired) userInfo:nil repeats:NO];
+        
+        [[NSRunLoop  currentRunLoop]addTimer:myTimer forMode:NSDefaultRunLoopMode];
+    }else if (indexPath.row == 1){//关于我们
+        [self.navigationController pushViewController:[[GZHAboutMeController alloc] init] animated:YES];
+    
+    }else if (indexPath.row == 2){//意见反馈
+        [self displayComposerSheet];
+        
+    }else if (indexPath.row == 3){//给我好评
+            [MBProgressHUD showSuccess:@"谢谢您的支持"];
+        
+    }else if (indexPath.row == 4){//分享游戏
+        [self.navigationController pushViewController:[[GZHShareGameController alloc] init] animated:YES];
+        
+    }
+}
+
+//提示缓存清理完毕
+- (void)timerFired{
+    
+    [MBProgressHUD hideHUD];
+    
+    [MBProgressHUD showSuccess:@"清除完毕"];
+}
+
+//邮件反馈功能
+- (void)displayComposerSheet {
+    if (![MFMailComposeViewController canSendMail]) {//设备不支持发邮件
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"请配置邮件"
+                                                        message:@"你的设备不支持发邮件，需要你配置你的设备"
+                                                       delegate:self
+                                              cancelButtonTitle:@"好的"
+                                              otherButtonTitles:nil,nil];
+        [alert show];
+        return;
+    } else {//设备支持发邮件
+        MFMailComposeViewController *picker = [[MFMailComposeViewController alloc] init];
+        picker.mailComposeDelegate = self;
+        [picker setSubject:[NSString stringWithFormat:@"意见反馈"]];
+        NSArray *toRecipients = [NSArray arrayWithObjects:@"object_c@126.com", nil];
+        [picker setToRecipients:toRecipients];
+        NSString *emailBody = @"我的意见是...";
+        [picker setMessageBody:emailBody isHTML:NO];
+        NSLog(@"还未弹出");
+        [self presentViewController:picker animated:YES completion:nil];
+        NSLog(@"弹出完毕");
+    }
+}
+
+// The mail compose view controller delegate method
+- (void)mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end

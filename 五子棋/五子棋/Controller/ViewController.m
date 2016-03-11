@@ -16,13 +16,19 @@
 #import "MBProgressHUD+MJ.h"
 #import <MessageUI/MessageUI.h>
 #import "GZHAboutMeController.h"
-#import "GZHShareGameController.h"
 #import "GZHRightCell.h"
-@interface ViewController () <AwesomeMenuDelegate,UITableViewDataSource,UITableViewDelegate,MFMailComposeViewControllerDelegate>
+#import "GZHPetalView.h"
+#import "UMSocial.h"
+@interface ViewController () <AwesomeMenuDelegate,UITableViewDataSource,UITableViewDelegate,MFMailComposeViewControllerDelegate,GZHPetalViewDelegate>
 @property (nonatomic,strong) AwesomeMenu *awesome;
 @property (assign, nonatomic) BOOL isShowClass;
 @property (nonatomic,strong) UITableView *moreTableview;
 @property (nonatomic,strong) NSArray *titleAry;
+@property (nonatomic,strong) GZHPetalView *menu;
+@property (weak, nonatomic) IBOutlet UIButton *enterGameBtn;
+@property (weak, nonatomic) IBOutlet UIButton *gameNewsBtn;
+@property (weak, nonatomic) IBOutlet UIButton *gameSettingBtn;
+@property (weak, nonatomic) IBOutlet UIButton *gameRightBtn;
 @end
 
 @implementation ViewController
@@ -53,8 +59,43 @@
     
     [self.view addGestureRecognizer:rightSwipeGestureRecognizer];
     
+    //增加分享界面
+    [self addShareGameSoftView];
+    
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(alreadyShow) name:@"alreadyShow" object:nil];
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(alreadyHidden) name:@"alreadyHidden" object:nil];
     
 }
+//分享花瓣展开时
+- (void)alreadyShow{
+    [self btnIsUserInteractionEnabled:NO];
+
+}
+
+//分享花瓣关闭时
+- (void)alreadyHidden{
+    [self btnIsUserInteractionEnabled:YES];
+
+}
+
+//设置按钮是否可用
+- (void)btnIsUserInteractionEnabled:(BOOL)userInteractionEnabled{
+    self.awesome.userInteractionEnabled = userInteractionEnabled;
+    self.gameNewsBtn.userInteractionEnabled = userInteractionEnabled;
+    self.gameRightBtn.userInteractionEnabled = userInteractionEnabled;
+    self.gameSettingBtn.userInteractionEnabled = userInteractionEnabled;
+    self.enterGameBtn.userInteractionEnabled = userInteractionEnabled;
+}
+//增加分享界面
+- (void)addShareGameSoftView{
+    NSArray *images = @[[UIImage imageNamed:@"sinaShareIcon"],[UIImage imageNamed:@"qqShareIcon.png"],[UIImage imageNamed:@"wechatShareIcon"],[UIImage imageNamed:@"friendShareIcon"],];
+    self.menu = [[GZHPetalView alloc] init];
+    self.menu.delegate = self;
+    self.menu.buttonImages = images;
+    [self.view addSubview:self.menu];
+
+}
+
 
 /**添加右边更多选项区域*/
 - (void)addMoreTableview
@@ -129,6 +170,7 @@
 - (void)dealloc
 {
     [self.awesome removeFromSuperview];
+    [[NSNotificationCenter defaultCenter]removeObserver:self];
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -274,6 +316,39 @@
     
 }
 
+#pragma  mark  GZHPetalViewDelegate
+- (void)GZHPetalView:(GZHPetalView *)menu didSelectedButtonAtIndex:(NSUInteger)index{
+    
+    [menu hide];
+    
+    [[UMSocialControllerService defaultControllerService] setShareText:@"最近我在玩:五子棋 华丽的界面、高超的棋艺、方便的操作,真是刺激,快快来和我一决高下吧!,我在这等你哦:http:www.baidu.com" shareImage:[UIImage imageNamed:@"icon"] socialUIDelegate:nil];
+    
+    switch (index) {
+        case 0://微博
+            NSLog(@"微博");
+            [UMSocialSnsPlatformManager getSocialPlatformWithName:UMShareToSina].snsClickHandler(self,[UMSocialControllerService defaultControllerService],YES);
+            break;
+            
+        case 1://QQ
+            NSLog(@"QQ");
+            [UMSocialSnsPlatformManager getSocialPlatformWithName:UMShareToQQ].snsClickHandler(self,[UMSocialControllerService defaultControllerService],YES);
+            break;
+        case 2://微信
+            NSLog(@"微信");
+            [UMSocialSnsPlatformManager getSocialPlatformWithName:UMShareToWechatSession].snsClickHandler(self,[UMSocialControllerService defaultControllerService],YES);
+            break;
+            
+        case 3://朋友圈
+            NSLog(@"朋友圈");
+            [UMSocialSnsPlatformManager getSocialPlatformWithName:UMShareToWechatTimeline].snsClickHandler(self,[UMSocialControllerService defaultControllerService],YES);
+            break;
+            
+        default:
+            
+            break;
+    }
+}
+
 
 #pragma  mark    tablview代理方法  数据源方法
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -298,7 +373,6 @@
     cell.layer.borderColor=[UIColor whiteColor].CGColor;
     cell.layer.borderWidth=0.5;
     cell.imageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"rightIcon%d",indexPath.row+1]];
-    
     cell.textLabel.text = self.titleAry[indexPath.row];
     cell.textLabel.textAlignment = NSTextAlignmentCenter;
     cell.textLabel.textColor = [UIColor whiteColor];
@@ -338,7 +412,7 @@
             [MBProgressHUD showSuccess:@"谢谢您的支持"];
         
     }else if (indexPath.row == 4){//分享游戏
-        [self.navigationController pushViewController:[[GZHShareGameController alloc] init] animated:YES];
+        [[NSNotificationCenter defaultCenter]postNotificationName:@"shareGameSoft" object:nil];
         
     }
 }

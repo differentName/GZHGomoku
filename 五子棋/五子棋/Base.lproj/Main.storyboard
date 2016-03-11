@@ -82,8 +82,8 @@
                                     <action selector="rightMoreBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="e8h-bt-Fti"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oVt-NI-RaG">
-                                <rect key="frame" x="182" y="115" width="236" height="100"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oVt-NI-RaG">
+                                <rect key="frame" x="218" y="96" width="236" height="100"/>
                                 <inset key="titleEdgeInsets" minX="5" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <inset key="imageEdgeInsets" minX="-10" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <state key="normal" title="进入游戏" image="main_game" backgroundImage="btnBgimg">
@@ -117,6 +117,12 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="YYQ-uD-RY7"/>
+                    <connections>
+                        <outlet property="enterGameBtn" destination="oVt-NI-RaG" id="3yp-L6-9Ob"/>
+                        <outlet property="gameNewsBtn" destination="tPV-4N-QAN" id="AAs-C9-vBn"/>
+                        <outlet property="gameRightBtn" destination="5ZI-iG-2KJ" id="lfe-Y1-HCA"/>
+                        <outlet property="gameSettingBtn" destination="kDr-KL-ZpH" id="4WK-CZ-GXZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

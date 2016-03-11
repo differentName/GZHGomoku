@@ -7,6 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GZHAboutMeController">
             <connections>
+                <outlet property="erweima" destination="ck4-hU-Ta0" id="BdY-mg-VdM"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -45,10 +46,10 @@
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ck4-hU-Ta0">
                     <rect key="frame" x="122" y="261" width="130" height="130"/>
-                    <state key="normal" image="icon"/>
-                    <connections>
-                        <action selector="readPic:" destination="-1" eventType="touchDown" id="cUe-bx-8Cm"/>
-                    </connections>
+                    <state key="normal" image="erweima"/>
+                    <state key="selected" image="erweima"/>
+                    <state key="highlighted" image="erweima"/>
+                    <state key="focused" image="erweima"/>
                 </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -75,6 +76,7 @@
     </objects>
     <resources>
         <image name="about_us_bg" width="375" height="667"/>
+        <image name="erweima" width="268" height="268"/>
         <image name="icon" width="180" height="180"/>
     </resources>
 </document>

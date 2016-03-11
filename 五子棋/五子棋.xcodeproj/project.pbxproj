@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		19935C0B8F44519F66D4B5A0 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B7EBD41BB643891110CDD878 /* libPods.a */; };
+		E6E17AEC1C91C72B002AFC34 /* GZHPetalView.m in Sources */ = {isa = PBXBuildFile; fileRef = E6E17AEB1C91C72B002AFC34 /* GZHPetalView.m */; };
 		E6E34FA91C88133A00E2FE1F /* GZHHttpTool.m in Sources */ = {isa = PBXBuildFile; fileRef = E6E34FA81C88133A00E2FE1F /* GZHHttpTool.m */; };
 		E6E34FBF1C8813CA00E2FE1F /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = E6E34FAD1C8813CA00E2FE1F /* AFHTTPRequestOperation.m */; };
 		E6E34FC01C8813CA00E2FE1F /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E6E34FAF1C8813CA00E2FE1F /* AFHTTPRequestOperationManager.m */; };
@@ -105,9 +106,8 @@
 		E6EC75DC1C8E76A500E02405 /* UIView+AutoLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = E6EC75DB1C8E76A500E02405 /* UIView+AutoLayout.m */; };
 		E6F2EC0A1C9008D200761CCB /* GZHAboutMeController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6F2EC081C9008D200761CCB /* GZHAboutMeController.m */; };
 		E6F2EC0B1C9008D200761CCB /* GZHAboutMeController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6F2EC091C9008D200761CCB /* GZHAboutMeController.xib */; };
-		E6F2EC0F1C90146900761CCB /* GZHShareGameController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6F2EC0D1C90146900761CCB /* GZHShareGameController.m */; };
-		E6F2EC101C90146900761CCB /* GZHShareGameController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6F2EC0E1C90146900761CCB /* GZHShareGameController.xib */; };
 		E6F2EC141C901F5600761CCB /* GZHRightCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E6F2EC131C901F5600761CCB /* GZHRightCell.m */; };
+		E6F2EC5F1C9176E400761CCB /* GZHPetalButton.m in Sources */ = {isa = PBXBuildFile; fileRef = E6F2EC5E1C9176E400761CCB /* GZHPetalButton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -131,6 +131,8 @@
 		2BC39F85C9F17AFF8EE6BAEB /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		2D4A628CC7016298728A857D /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		B7EBD41BB643891110CDD878 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		E6E17AEA1C91C72B002AFC34 /* GZHPetalView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GZHPetalView.h; sourceTree = "<group>"; };
+		E6E17AEB1C91C72B002AFC34 /* GZHPetalView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GZHPetalView.m; sourceTree = "<group>"; };
 		E6E34FA71C88133A00E2FE1F /* GZHHttpTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GZHHttpTool.h; sourceTree = "<group>"; };
 		E6E34FA81C88133A00E2FE1F /* GZHHttpTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GZHHttpTool.m; sourceTree = "<group>"; };
 		E6E34FAC1C8813CA00E2FE1F /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
@@ -311,11 +313,10 @@
 		E6F2EC071C9008D200761CCB /* GZHAboutMeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GZHAboutMeController.h; sourceTree = "<group>"; };
 		E6F2EC081C9008D200761CCB /* GZHAboutMeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GZHAboutMeController.m; sourceTree = "<group>"; };
 		E6F2EC091C9008D200761CCB /* GZHAboutMeController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GZHAboutMeController.xib; sourceTree = "<group>"; };
-		E6F2EC0C1C90146900761CCB /* GZHShareGameController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GZHShareGameController.h; sourceTree = "<group>"; };
-		E6F2EC0D1C90146900761CCB /* GZHShareGameController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GZHShareGameController.m; sourceTree = "<group>"; };
-		E6F2EC0E1C90146900761CCB /* GZHShareGameController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GZHShareGameController.xib; sourceTree = "<group>"; };
 		E6F2EC121C901F5600761CCB /* GZHRightCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GZHRightCell.h; sourceTree = "<group>"; };
 		E6F2EC131C901F5600761CCB /* GZHRightCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GZHRightCell.m; sourceTree = "<group>"; };
+		E6F2EC5D1C9176E400761CCB /* GZHPetalButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GZHPetalButton.h; sourceTree = "<group>"; };
+		E6F2EC5E1C9176E400761CCB /* GZHPetalButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GZHPetalButton.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -475,8 +476,12 @@
 		E6E350291C881E2200E2FE1F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E6E17AEA1C91C72B002AFC34 /* GZHPetalView.h */,
+				E6E17AEB1C91C72B002AFC34 /* GZHPetalView.m */,
 				E6F2EC121C901F5600761CCB /* GZHRightCell.h */,
 				E6F2EC131C901F5600761CCB /* GZHRightCell.m */,
+				E6F2EC5D1C9176E400761CCB /* GZHPetalButton.h */,
+				E6F2EC5E1C9176E400761CCB /* GZHPetalButton.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -586,9 +591,6 @@
 				E6F2EC071C9008D200761CCB /* GZHAboutMeController.h */,
 				E6F2EC081C9008D200761CCB /* GZHAboutMeController.m */,
 				E6F2EC091C9008D200761CCB /* GZHAboutMeController.xib */,
-				E6F2EC0C1C90146900761CCB /* GZHShareGameController.h */,
-				E6F2EC0D1C90146900761CCB /* GZHShareGameController.m */,
-				E6F2EC0E1C90146900761CCB /* GZHShareGameController.xib */,
 			);
 			path = GameSetting;
 			sourceTree = "<group>";
@@ -924,7 +926,6 @@
 				E6E350691C881E9B00E2FE1F /* check.wav in Resources */,
 				E6E3511A1C89F0A800E2FE1F /* UMSocialSDKResourcesNew.bundle in Resources */,
 				E6E350BA1C8830C000E2FE1F /* GZHNewDetailController.xib in Resources */,
-				E6F2EC101C90146900761CCB /* GZHShareGameController.xib in Resources */,
 				E6E34FFD1C8816B100E2FE1F /* MJRefresh.bundle in Resources */,
 				E6E3506E1C881E9B00E2FE1F /* pipa.mp3 in Resources */,
 				E6E350661C881E9B00E2FE1F /* au_gameover.wav in Resources */,
@@ -1027,7 +1028,6 @@
 				E6E34FC11C8813CA00E2FE1F /* AFHTTPSessionManager.m in Sources */,
 				E6E350B31C8827DB00E2FE1F /* MBProgressHUD+MJ.m in Sources */,
 				E6E3500E1C881E0C00E2FE1F /* UIColor+setting.m in Sources */,
-				E6F2EC0F1C90146900761CCB /* GZHShareGameController.m in Sources */,
 				E6E350971C881EC300E2FE1F /* GZHGomokuPieceView.m in Sources */,
 				E6E34FC41C8813CA00E2FE1F /* AFURLConnectionOperation.m in Sources */,
 				E6F2EC0A1C9008D200761CCB /* GZHAboutMeController.m in Sources */,
@@ -1069,7 +1069,9 @@
 				E6E3504F1C881E4100E2FE1F /* MJExtensionConst.m in Sources */,
 				E6E3504E1C881E4100E2FE1F /* MJDictionaryCache.m in Sources */,
 				E6E3508D1C881EC300E2FE1F /* GZHGomokuBaseStack.m in Sources */,
+				E6F2EC5F1C9176E400761CCB /* GZHPetalButton.m in Sources */,
 				E6E350A71C88205B00E2FE1F /* GZHGameNewsHomeController.m in Sources */,
+				E6E17AEC1C91C72B002AFC34 /* GZHPetalView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

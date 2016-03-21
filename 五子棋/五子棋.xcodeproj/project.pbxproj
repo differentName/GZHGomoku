@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		19935C0B8F44519F66D4B5A0 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B7EBD41BB643891110CDD878 /* libPods.a */; };
+		E637FF381C9309BE007953E1 /* GZHExpressController.m in Sources */ = {isa = PBXBuildFile; fileRef = E637FF361C9309BE007953E1 /* GZHExpressController.m */; };
+		E637FF391C9309BE007953E1 /* GZHExpressController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E637FF371C9309BE007953E1 /* GZHExpressController.xib */; };
+		E637FF3C1C932703007953E1 /* GZHExpressModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E637FF3B1C932703007953E1 /* GZHExpressModel.m */; };
+		E637FF3F1C933690007953E1 /* ScannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E637FF3E1C933690007953E1 /* ScannerViewController.m */; };
 		E6E17AEC1C91C72B002AFC34 /* GZHPetalView.m in Sources */ = {isa = PBXBuildFile; fileRef = E6E17AEB1C91C72B002AFC34 /* GZHPetalView.m */; };
 		E6E34FA91C88133A00E2FE1F /* GZHHttpTool.m in Sources */ = {isa = PBXBuildFile; fileRef = E6E34FA81C88133A00E2FE1F /* GZHHttpTool.m */; };
 		E6E34FBF1C8813CA00E2FE1F /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = E6E34FAD1C8813CA00E2FE1F /* AFHTTPRequestOperation.m */; };
@@ -131,6 +135,13 @@
 		2BC39F85C9F17AFF8EE6BAEB /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		2D4A628CC7016298728A857D /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		B7EBD41BB643891110CDD878 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		E637FF351C9309BE007953E1 /* GZHExpressController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GZHExpressController.h; sourceTree = "<group>"; };
+		E637FF361C9309BE007953E1 /* GZHExpressController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GZHExpressController.m; sourceTree = "<group>"; };
+		E637FF371C9309BE007953E1 /* GZHExpressController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GZHExpressController.xib; sourceTree = "<group>"; };
+		E637FF3A1C932703007953E1 /* GZHExpressModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GZHExpressModel.h; sourceTree = "<group>"; };
+		E637FF3B1C932703007953E1 /* GZHExpressModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GZHExpressModel.m; sourceTree = "<group>"; };
+		E637FF3D1C933690007953E1 /* ScannerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScannerViewController.h; sourceTree = "<group>"; };
+		E637FF3E1C933690007953E1 /* ScannerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScannerViewController.m; sourceTree = "<group>"; };
 		E6E17AEA1C91C72B002AFC34 /* GZHPetalView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GZHPetalView.h; sourceTree = "<group>"; };
 		E6E17AEB1C91C72B002AFC34 /* GZHPetalView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GZHPetalView.m; sourceTree = "<group>"; };
 		E6E34FA71C88133A00E2FE1F /* GZHHttpTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GZHHttpTool.h; sourceTree = "<group>"; };
@@ -387,6 +398,8 @@
 		E6E34FAA1C8813B300E2FE1F /* thirdPart */ = {
 			isa = PBXGroup;
 			children = (
+				E637FF3D1C933690007953E1 /* ScannerViewController.h */,
+				E637FF3E1C933690007953E1 /* ScannerViewController.m */,
 				E6EC75D91C8E76A500E02405 /* UIView-AutoLayout-master */,
 				E6EC75D21C8E733F00E02405 /* AwesomeMenu(天女散花效果的菜单) */,
 				E6E3512B1C89F28500E2FE1F /* share */,
@@ -469,6 +482,8 @@
 			children = (
 				E6E350AA1C88269600E2FE1F /* GZHNewsModel.h */,
 				E6E350AB1C88269600E2FE1F /* GZHNewsModel.m */,
+				E637FF3A1C932703007953E1 /* GZHExpressModel.h */,
+				E637FF3B1C932703007953E1 /* GZHExpressModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -591,6 +606,9 @@
 				E6F2EC071C9008D200761CCB /* GZHAboutMeController.h */,
 				E6F2EC081C9008D200761CCB /* GZHAboutMeController.m */,
 				E6F2EC091C9008D200761CCB /* GZHAboutMeController.xib */,
+				E637FF351C9309BE007953E1 /* GZHExpressController.h */,
+				E637FF361C9309BE007953E1 /* GZHExpressController.m */,
+				E637FF371C9309BE007953E1 /* GZHExpressController.xib */,
 			);
 			path = GameSetting;
 			sourceTree = "<group>";
@@ -923,6 +941,7 @@
 				E6E9F9D91C86E92C006D4268 /* Main.storyboard in Resources */,
 				E6E351171C89F0A800E2FE1F /* UMSLoginViewController.xib in Resources */,
 				E6E351151C89F0A800E2FE1F /* UMShareEditViewController.xib in Resources */,
+				E637FF391C9309BE007953E1 /* GZHExpressController.xib in Resources */,
 				E6E350691C881E9B00E2FE1F /* check.wav in Resources */,
 				E6E3511A1C89F0A800E2FE1F /* UMSocialSDKResourcesNew.bundle in Resources */,
 				E6E350BA1C8830C000E2FE1F /* GZHNewDetailController.xib in Resources */,
@@ -1028,6 +1047,7 @@
 				E6E34FC11C8813CA00E2FE1F /* AFHTTPSessionManager.m in Sources */,
 				E6E350B31C8827DB00E2FE1F /* MBProgressHUD+MJ.m in Sources */,
 				E6E3500E1C881E0C00E2FE1F /* UIColor+setting.m in Sources */,
+				E637FF3F1C933690007953E1 /* ScannerViewController.m in Sources */,
 				E6E350971C881EC300E2FE1F /* GZHGomokuPieceView.m in Sources */,
 				E6E34FC41C8813CA00E2FE1F /* AFURLConnectionOperation.m in Sources */,
 				E6F2EC0A1C9008D200761CCB /* GZHAboutMeController.m in Sources */,
@@ -1048,6 +1068,7 @@
 				E6E350011C8816B100E2FE1F /* MJRefreshHeaderView.m in Sources */,
 				E6E350531C881E4100E2FE1F /* MJPropertyType.m in Sources */,
 				E6EC75DC1C8E76A500E02405 /* UIView+AutoLayout.m in Sources */,
+				E637FF3C1C932703007953E1 /* GZHExpressModel.m in Sources */,
 				E6E350551C881E4100E2FE1F /* NSObject+MJCoding.m in Sources */,
 				E6E351311C89F28500E2FE1F /* CLView.m in Sources */,
 				E6E350951C881EC300E2FE1F /* GZHGomokuLinePoints.m in Sources */,
@@ -1070,6 +1091,7 @@
 				E6E3504E1C881E4100E2FE1F /* MJDictionaryCache.m in Sources */,
 				E6E3508D1C881EC300E2FE1F /* GZHGomokuBaseStack.m in Sources */,
 				E6F2EC5F1C9176E400761CCB /* GZHPetalButton.m in Sources */,
+				E637FF381C9309BE007953E1 /* GZHExpressController.m in Sources */,
 				E6E350A71C88205B00E2FE1F /* GZHGameNewsHomeController.m in Sources */,
 				E6E17AEC1C91C72B002AFC34 /* GZHPetalView.m in Sources */,
 			);

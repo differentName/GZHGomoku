@@ -19,7 +19,10 @@
 #import "GZHRightCell.h"
 #import "GZHPetalView.h"
 #import "UMSocial.h"
-@interface ViewController () <AwesomeMenuDelegate,UITableViewDataSource,UITableViewDelegate,MFMailComposeViewControllerDelegate,GZHPetalViewDelegate>
+#import "GZHExpressController.h"
+#import <ZXingObjC/ZXingObjC.h>
+#import "ScannerViewController.h"
+@interface ViewController () <AwesomeMenuDelegate,UITableViewDataSource,UITableViewDelegate,MFMailComposeViewControllerDelegate,GZHPetalViewDelegate,ScannerViewControllerDelegate>
 @property (nonatomic,strong) AwesomeMenu *awesome;
 @property (assign, nonatomic) BOOL isShowClass;
 @property (nonatomic,strong) UITableView *moreTableview;
@@ -29,6 +32,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *gameNewsBtn;
 @property (weak, nonatomic) IBOutlet UIButton *gameSettingBtn;
 @property (weak, nonatomic) IBOutlet UIButton *gameRightBtn;
+@property (nonatomic,strong) UITapGestureRecognizer *openGesture;
 @end
 
 @implementation ViewController
@@ -124,12 +128,12 @@
     //周边按钮
     //天气
     AwesomeMenuItem *item1 = [[AwesomeMenuItem alloc]initWithImage:[UIImage imageNamed:@"weather"] highlightedImage:nil ContentImage:[UIImage imageNamed:@"menuBg"] highlightedContentImage:[UIImage imageNamed:@"menuBg"]];
-    //油价
-    AwesomeMenuItem *item2 = [[AwesomeMenuItem alloc]initWithImage:[UIImage imageNamed:@"youjia"] highlightedImage:nil ContentImage:[UIImage imageNamed:@"menuBg"] highlightedContentImage:[UIImage imageNamed:@"menuBg"]];
-    //手机
-    AwesomeMenuItem *item3 = [[AwesomeMenuItem alloc]initWithImage:[UIImage imageNamed:@"apple"] highlightedImage:nil ContentImage:[UIImage imageNamed:@"menuBg"] highlightedContentImage:[UIImage imageNamed:@"menuBg"]];
     //快递
-    AwesomeMenuItem *item4 = [[AwesomeMenuItem alloc]initWithImage:[UIImage imageNamed:@"shop"] highlightedImage:nil ContentImage:[UIImage imageNamed:@"menuBg"] highlightedContentImage:[UIImage imageNamed:@"menuBg"]];
+    AwesomeMenuItem *item2 = [[AwesomeMenuItem alloc]initWithImage:[UIImage imageNamed:@"shop"] highlightedImage:nil ContentImage:[UIImage imageNamed:@"menuBg"] highlightedContentImage:[UIImage imageNamed:@"menuBg"]];
+    //扫描二维码
+    AwesomeMenuItem *item3 = [[AwesomeMenuItem alloc]initWithImage:[UIImage imageNamed:@"scan"] highlightedImage:nil ContentImage:[UIImage imageNamed:@"menuBg"] highlightedContentImage:[UIImage imageNamed:@"menuBg"]];
+    //搜索
+    AwesomeMenuItem *item4 = [[AwesomeMenuItem alloc]initWithImage:[UIImage imageNamed:@"baidu"] highlightedImage:nil ContentImage:[UIImage imageNamed:@"menuBg"] highlightedContentImage:[UIImage imageNamed:@"menuBg"]];
     
     NSArray *itemsAry = @[item1,item2,item3,item4];
     AwesomeMenu *awesome = [[AwesomeMenu alloc]initWithFrame:CGRectZero startItem:start menuItems:itemsAry];
@@ -223,7 +227,10 @@
     //设置keyWindow的背景颜色
     [UIApplication sharedApplication].keyWindow.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"main_bgImage"]];
     
-    [[UIApplication sharedApplication].keyWindow addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(closeRightMoreView)]];
+#warning mark - 这个手势会影响到push出的自控制器的交互效果 所以要在关闭右边更多功能界面时销毁
+    UITapGestureRecognizer *openGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(closeRightMoreView)];
+    self.openGesture = openGesture;
+    [[UIApplication sharedApplication].keyWindow addGestureRecognizer:openGesture];
     
     [UIView animateWithDuration:0.2 animations:^{
         //            self.view.y = 60;
@@ -238,7 +245,7 @@
 
 //关闭右边更多选项按钮
 - (void)closeRightMoreView{
-    if (self.isShowClass) {//正在显示匪类
+    if (self.isShowClass) {//正在显示分类
         [UIView animateWithDuration:0.2 animations:^{
             
             //            self.view.y = 0;
@@ -251,6 +258,7 @@
             self.view.transform = CGAffineTransformScale(form, 1.0,1.0);;
         } completion:^(BOOL finished) {
             self.isShowClass = NO;
+            [[UIApplication sharedApplication].keyWindow removeGestureRecognizer:self.openGesture];
         }];
     }
 }
@@ -293,23 +301,19 @@
             //            [self presentViewController:nav animated:YES completion:nil];
             break;
         }
-        case 1:{//油价
-            //            BOSSPriceController *price = [[BOSSPriceController alloc]init];
-            //            UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:price];
-            //            [self presentViewController:nav animated:YES completion:nil];
+        case 1:{//快递
+            GZHExpressController *express = [[GZHExpressController alloc]init];
+            [self.navigationController pushViewController:express animated:YES];
             break;
         }
-        case 2:{//手机
-            //            BOSSPhoneController *phone = [[BOSSPhoneController alloc]init];
-            //            UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:phone];
-            //            [self presentViewController:nav animated:YES completion:nil];
+        case 2:{//二维码
+            ScannerViewController *svc=[[ScannerViewController alloc]init];
+            svc.delegate=self;
+            [self presentViewController:svc animated:YES completion:nil];
             break;
         }
-        case 3:{//快递
-            //            BOSSExpressController *express = [[BOSSExpressController alloc]init];
-            //            UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:express];
-            //            [self presentViewController:nav animated:YES completion:nil];
-            
+        case 3:{//搜索
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.baidu.com"]];
             break;
         }
     }

@@ -8,10 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		19935C0B8F44519F66D4B5A0 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B7EBD41BB643891110CDD878 /* libPods.a */; };
+		E6268B031CA02E3500FCA829 /* GZHWeatherController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6268B011CA02E3500FCA829 /* GZHWeatherController.m */; };
+		E6268B041CA02E3500FCA829 /* GZHWeatherController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6268B021CA02E3500FCA829 /* GZHWeatherController.xib */; };
+		E6268B0B1CA0306F00FCA829 /* CCLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E6268B071CA0306F00FCA829 /* CCLocationManager.m */; };
+		E6268B0C1CA0306F00FCA829 /* CLLocation+YCLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = E6268B091CA0306F00FCA829 /* CLLocation+YCLocation.m */; };
+		E6268B0D1CA0306F00FCA829 /* read.text in Sources */ = {isa = PBXBuildFile; fileRef = E6268B0A1CA0306F00FCA829 /* read.text */; };
+		E6268B101CA056A900FCA829 /* Foundation+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = E6268B0F1CA056A900FCA829 /* Foundation+Log.m */; };
 		E637FF381C9309BE007953E1 /* GZHExpressController.m in Sources */ = {isa = PBXBuildFile; fileRef = E637FF361C9309BE007953E1 /* GZHExpressController.m */; };
 		E637FF391C9309BE007953E1 /* GZHExpressController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E637FF371C9309BE007953E1 /* GZHExpressController.xib */; };
 		E637FF3C1C932703007953E1 /* GZHExpressModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E637FF3B1C932703007953E1 /* GZHExpressModel.m */; };
 		E637FF3F1C933690007953E1 /* ScannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E637FF3E1C933690007953E1 /* ScannerViewController.m */; };
+		E6AB6C361CA238CF000AFA76 /* GZHWeatherModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E6AB6C351CA238CF000AFA76 /* GZHWeatherModel.m */; };
+		E6AB6C3D1CA2CBCA000AFA76 /* GZHWeatherView.m in Sources */ = {isa = PBXBuildFile; fileRef = E6AB6C3C1CA2CBCA000AFA76 /* GZHWeatherView.m */; };
+		E6AB6C3F1CA2CBD5000AFA76 /* GZHWeatherView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6AB6C3E1CA2CBD5000AFA76 /* GZHWeatherView.xib */; };
+		E6AB6C431CA2D6C1000AFA76 /* GZHWeatherSuggestionController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6AB6C421CA2D6C1000AFA76 /* GZHWeatherSuggestionController.m */; };
 		E6E17AEC1C91C72B002AFC34 /* GZHPetalView.m in Sources */ = {isa = PBXBuildFile; fileRef = E6E17AEB1C91C72B002AFC34 /* GZHPetalView.m */; };
 		E6E34FA91C88133A00E2FE1F /* GZHHttpTool.m in Sources */ = {isa = PBXBuildFile; fileRef = E6E34FA81C88133A00E2FE1F /* GZHHttpTool.m */; };
 		E6E34FBF1C8813CA00E2FE1F /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = E6E34FAD1C8813CA00E2FE1F /* AFHTTPRequestOperation.m */; };
@@ -135,6 +145,15 @@
 		2BC39F85C9F17AFF8EE6BAEB /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		2D4A628CC7016298728A857D /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		B7EBD41BB643891110CDD878 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		E6268B001CA02E3500FCA829 /* GZHWeatherController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GZHWeatherController.h; sourceTree = "<group>"; };
+		E6268B011CA02E3500FCA829 /* GZHWeatherController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GZHWeatherController.m; sourceTree = "<group>"; };
+		E6268B021CA02E3500FCA829 /* GZHWeatherController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GZHWeatherController.xib; sourceTree = "<group>"; };
+		E6268B061CA0306F00FCA829 /* CCLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCLocationManager.h; sourceTree = "<group>"; };
+		E6268B071CA0306F00FCA829 /* CCLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCLocationManager.m; sourceTree = "<group>"; };
+		E6268B081CA0306F00FCA829 /* CLLocation+YCLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CLLocation+YCLocation.h"; sourceTree = "<group>"; };
+		E6268B091CA0306F00FCA829 /* CLLocation+YCLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CLLocation+YCLocation.m"; sourceTree = "<group>"; };
+		E6268B0A1CA0306F00FCA829 /* read.text */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = read.text; sourceTree = "<group>"; };
+		E6268B0F1CA056A900FCA829 /* Foundation+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Foundation+Log.m"; sourceTree = "<group>"; };
 		E637FF351C9309BE007953E1 /* GZHExpressController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GZHExpressController.h; sourceTree = "<group>"; };
 		E637FF361C9309BE007953E1 /* GZHExpressController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GZHExpressController.m; sourceTree = "<group>"; };
 		E637FF371C9309BE007953E1 /* GZHExpressController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GZHExpressController.xib; sourceTree = "<group>"; };
@@ -142,6 +161,13 @@
 		E637FF3B1C932703007953E1 /* GZHExpressModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GZHExpressModel.m; sourceTree = "<group>"; };
 		E637FF3D1C933690007953E1 /* ScannerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScannerViewController.h; sourceTree = "<group>"; };
 		E637FF3E1C933690007953E1 /* ScannerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScannerViewController.m; sourceTree = "<group>"; };
+		E6AB6C341CA238CF000AFA76 /* GZHWeatherModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GZHWeatherModel.h; sourceTree = "<group>"; };
+		E6AB6C351CA238CF000AFA76 /* GZHWeatherModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GZHWeatherModel.m; sourceTree = "<group>"; };
+		E6AB6C3B1CA2CBCA000AFA76 /* GZHWeatherView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GZHWeatherView.h; sourceTree = "<group>"; };
+		E6AB6C3C1CA2CBCA000AFA76 /* GZHWeatherView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GZHWeatherView.m; sourceTree = "<group>"; };
+		E6AB6C3E1CA2CBD5000AFA76 /* GZHWeatherView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GZHWeatherView.xib; sourceTree = "<group>"; };
+		E6AB6C411CA2D6C1000AFA76 /* GZHWeatherSuggestionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GZHWeatherSuggestionController.h; sourceTree = "<group>"; };
+		E6AB6C421CA2D6C1000AFA76 /* GZHWeatherSuggestionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GZHWeatherSuggestionController.m; sourceTree = "<group>"; };
 		E6E17AEA1C91C72B002AFC34 /* GZHPetalView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GZHPetalView.h; sourceTree = "<group>"; };
 		E6E17AEB1C91C72B002AFC34 /* GZHPetalView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GZHPetalView.m; sourceTree = "<group>"; };
 		E6E34FA71C88133A00E2FE1F /* GZHHttpTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GZHHttpTool.h; sourceTree = "<group>"; };
@@ -382,9 +408,22 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		E6268B051CA0306F00FCA829 /* 获取当前位置信息CCLocation */ = {
+			isa = PBXGroup;
+			children = (
+				E6268B061CA0306F00FCA829 /* CCLocationManager.h */,
+				E6268B071CA0306F00FCA829 /* CCLocationManager.m */,
+				E6268B081CA0306F00FCA829 /* CLLocation+YCLocation.h */,
+				E6268B091CA0306F00FCA829 /* CLLocation+YCLocation.m */,
+				E6268B0A1CA0306F00FCA829 /* read.text */,
+			);
+			path = "获取当前位置信息CCLocation";
+			sourceTree = "<group>";
+		};
 		E6E34FA61C88133300E2FE1F /* tools */ = {
 			isa = PBXGroup;
 			children = (
+				E6268B0F1CA056A900FCA829 /* Foundation+Log.m */,
 				E6E350091C881E0C00E2FE1F /* HBPlaySoundUtil.h */,
 				E6E3500A1C881E0C00E2FE1F /* HBPlaySoundUtil.m */,
 				E6E3500B1C881E0C00E2FE1F /* UIColor+setting.h */,
@@ -398,6 +437,7 @@
 		E6E34FAA1C8813B300E2FE1F /* thirdPart */ = {
 			isa = PBXGroup;
 			children = (
+				E6268B051CA0306F00FCA829 /* 获取当前位置信息CCLocation */,
 				E637FF3D1C933690007953E1 /* ScannerViewController.h */,
 				E637FF3E1C933690007953E1 /* ScannerViewController.m */,
 				E6EC75D91C8E76A500E02405 /* UIView-AutoLayout-master */,
@@ -484,6 +524,8 @@
 				E6E350AB1C88269600E2FE1F /* GZHNewsModel.m */,
 				E637FF3A1C932703007953E1 /* GZHExpressModel.h */,
 				E637FF3B1C932703007953E1 /* GZHExpressModel.m */,
+				E6AB6C341CA238CF000AFA76 /* GZHWeatherModel.h */,
+				E6AB6C351CA238CF000AFA76 /* GZHWeatherModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -497,6 +539,9 @@
 				E6F2EC131C901F5600761CCB /* GZHRightCell.m */,
 				E6F2EC5D1C9176E400761CCB /* GZHPetalButton.h */,
 				E6F2EC5E1C9176E400761CCB /* GZHPetalButton.m */,
+				E6AB6C3B1CA2CBCA000AFA76 /* GZHWeatherView.h */,
+				E6AB6C3C1CA2CBCA000AFA76 /* GZHWeatherView.m */,
+				E6AB6C3E1CA2CBD5000AFA76 /* GZHWeatherView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -603,12 +648,17 @@
 		E6E3508B1C881EC300E2FE1F /* GameSetting */ = {
 			isa = PBXGroup;
 			children = (
+				E6268B001CA02E3500FCA829 /* GZHWeatherController.h */,
+				E6268B011CA02E3500FCA829 /* GZHWeatherController.m */,
+				E6268B021CA02E3500FCA829 /* GZHWeatherController.xib */,
 				E6F2EC071C9008D200761CCB /* GZHAboutMeController.h */,
 				E6F2EC081C9008D200761CCB /* GZHAboutMeController.m */,
 				E6F2EC091C9008D200761CCB /* GZHAboutMeController.xib */,
 				E637FF351C9309BE007953E1 /* GZHExpressController.h */,
 				E637FF361C9309BE007953E1 /* GZHExpressController.m */,
 				E637FF371C9309BE007953E1 /* GZHExpressController.xib */,
+				E6AB6C411CA2D6C1000AFA76 /* GZHWeatherSuggestionController.h */,
+				E6AB6C421CA2D6C1000AFA76 /* GZHWeatherSuggestionController.m */,
 			);
 			path = GameSetting;
 			sourceTree = "<group>";
@@ -931,6 +981,7 @@
 			files = (
 				E6E351181C89F0A800E2FE1F /* UMSnsAccountViewController.xib in Resources */,
 				E6E3506C1C881E9B00E2FE1F /* marking.wav in Resources */,
+				E6268B041CA02E3500FCA829 /* GZHWeatherController.xib in Resources */,
 				E6E350B41C8827DB00E2FE1F /* MBProgressHUD.bundle in Resources */,
 				E6E3506B1C881E9B00E2FE1F /* lost.wav in Resources */,
 				E6E3511D1C89F0A800E2FE1F /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
@@ -951,6 +1002,7 @@
 				E6E3506A1C881E9B00E2FE1F /* down.wav in Resources */,
 				E6E3506D1C881E9B00E2FE1F /* mode.wav in Resources */,
 				E6F2EC0B1C9008D200761CCB /* GZHAboutMeController.xib in Resources */,
+				E6AB6C3F1CA2CBD5000AFA76 /* GZHWeatherView.xib in Resources */,
 				E6E351161C89F0A800E2FE1F /* UMShareEditViewControlleriPad.xib in Resources */,
 				E6E351101C89F0A800E2FE1F /* UMSocialLocalizable.strings in Resources */,
 				E6E351121C89F0A800E2FE1F /* UMSCommentDetailController.xib in Resources */,
@@ -1036,6 +1088,7 @@
 				E6E34FC01C8813CA00E2FE1F /* AFHTTPRequestOperationManager.m in Sources */,
 				E6E34FFE1C8816B100E2FE1F /* MJRefreshBaseView.m in Sources */,
 				E6E350B91C8830C000E2FE1F /* GZHNewDetailController.m in Sources */,
+				E6268B0B1CA0306F00FCA829 /* CCLocationManager.m in Sources */,
 				E6E350561C881E4100E2FE1F /* NSObject+MJKeyValue.m in Sources */,
 				E6E3508E1C881EC300E2FE1F /* GZHGomokuChessboard.m in Sources */,
 				E6E350511C881E4100E2FE1F /* MJProperty.m in Sources */,
@@ -1052,7 +1105,9 @@
 				E6E34FC41C8813CA00E2FE1F /* AFURLConnectionOperation.m in Sources */,
 				E6F2EC0A1C9008D200761CCB /* GZHAboutMeController.m in Sources */,
 				E6E34FC51C8813CA00E2FE1F /* AFURLRequestSerialization.m in Sources */,
+				E6AB6C361CA238CF000AFA76 /* GZHWeatherModel.m in Sources */,
 				E6E34FFF1C8816B100E2FE1F /* MJRefreshConst.m in Sources */,
+				E6268B101CA056A900FCA829 /* Foundation+Log.m in Sources */,
 				E6E351301C89F28500E2FE1F /* CLAnimationView.m in Sources */,
 				E6E350B51C8827DB00E2FE1F /* MBProgressHUD.m in Sources */,
 				E6E3508C1C881EC300E2FE1F /* GZHGomokuActualStack.m in Sources */,
@@ -1060,17 +1115,21 @@
 				E6E34FC61C8813CA00E2FE1F /* AFURLResponseSerialization.m in Sources */,
 				E6E34FA91C88133A00E2FE1F /* GZHHttpTool.m in Sources */,
 				E6E3509A1C881EE600E2FE1F /* ViewController.m in Sources */,
+				E6268B031CA02E3500FCA829 /* GZHWeatherController.m in Sources */,
 				E6E350941C881EC300E2FE1F /* GZHGomokuGameSencesViewController.m in Sources */,
 				E6E350501C881E4100E2FE1F /* MJFoundation.m in Sources */,
+				E6AB6C3D1CA2CBCA000AFA76 /* GZHWeatherView.m in Sources */,
 				E6E350081C881CFB00E2FE1F /* DCPicScrollView.m in Sources */,
 				E6E350041C8816B100E2FE1F /* UIView+MJExtension.m in Sources */,
 				E6E3508F1C881EC300E2FE1F /* GZHGomokuChessElement.m in Sources */,
 				E6E350011C8816B100E2FE1F /* MJRefreshHeaderView.m in Sources */,
 				E6E350531C881E4100E2FE1F /* MJPropertyType.m in Sources */,
+				E6268B0D1CA0306F00FCA829 /* read.text in Sources */,
 				E6EC75DC1C8E76A500E02405 /* UIView+AutoLayout.m in Sources */,
 				E637FF3C1C932703007953E1 /* GZHExpressModel.m in Sources */,
 				E6E350551C881E4100E2FE1F /* NSObject+MJCoding.m in Sources */,
 				E6E351311C89F28500E2FE1F /* CLView.m in Sources */,
+				E6AB6C431CA2D6C1000AFA76 /* GZHWeatherSuggestionController.m in Sources */,
 				E6E350951C881EC300E2FE1F /* GZHGomokuLinePoints.m in Sources */,
 				E6E350911C881EC300E2FE1F /* GZHGomokuChessPoint.m in Sources */,
 				E6E350921C881EC300E2FE1F /* GZHGomokuEnvisionStack.m in Sources */,
@@ -1087,6 +1146,7 @@
 				E6E350961C881EC300E2FE1F /* GZHGomokuOverViewController.m in Sources */,
 				E6EC75D71C8E733F00E02405 /* AwesomeMenu.m in Sources */,
 				E6E350581C881E4100E2FE1F /* NSString+MJExtension.m in Sources */,
+				E6268B0C1CA0306F00FCA829 /* CLLocation+YCLocation.m in Sources */,
 				E6E3504F1C881E4100E2FE1F /* MJExtensionConst.m in Sources */,
 				E6E3504E1C881E4100E2FE1F /* MJDictionaryCache.m in Sources */,
 				E6E3508D1C881EC300E2FE1F /* GZHGomokuBaseStack.m in Sources */,

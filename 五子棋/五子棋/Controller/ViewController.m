@@ -22,6 +22,7 @@
 #import "GZHExpressController.h"
 #import <ZXingObjC/ZXingObjC.h>
 #import "ScannerViewController.h"
+#import "GZHWeatherController.h"
 @interface ViewController () <AwesomeMenuDelegate,UITableViewDataSource,UITableViewDelegate,MFMailComposeViewControllerDelegate,GZHPetalViewDelegate,ScannerViewControllerDelegate>
 @property (nonatomic,strong) AwesomeMenu *awesome;
 @property (assign, nonatomic) BOOL isShowClass;
@@ -296,9 +297,8 @@
     
     switch (idx) {
         case 0:{//天气
-            //            BOSSWeatherController *weather = [[BOSSWeatherController alloc]init];
-            //            UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:weather];
-            //            [self presentViewController:nav animated:YES completion:nil];
+            GZHWeatherController *weather = [[GZHWeatherController alloc]init];
+            [self.navigationController pushViewController:weather animated:YES];
             break;
         }
         case 1:{//快递

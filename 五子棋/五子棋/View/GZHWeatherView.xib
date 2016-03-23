@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="JV1-DU-0ke" customClass="GZHWeatherView">
+            <rect key="frame" x="0.0" y="0.0" width="143" height="137"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QOn-4d-7kS">
+                    <rect key="frame" x="51" y="93" width="39.5" height="19.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="878-SJ-Jpb">
+                    <rect key="frame" x="51" y="117" width="39.5" height="19.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ih5-AX-9xy">
+                    <rect key="frame" x="51" y="5" width="40" height="18"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="R6g-zH-Xya">
+                    <rect key="frame" x="46" y="33" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="TcN-f6-MWE"/>
+                        <constraint firstAttribute="width" constant="50" id="WlI-Dc-F7A"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="QOn-4d-7kS" firstAttribute="centerX" secondItem="JV1-DU-0ke" secondAttribute="centerX" id="AAe-SP-1y9"/>
+                <constraint firstItem="878-SJ-Jpb" firstAttribute="centerX" secondItem="JV1-DU-0ke" secondAttribute="centerX" id="GSS-jE-yCc"/>
+                <constraint firstItem="ih5-AX-9xy" firstAttribute="top" secondItem="JV1-DU-0ke" secondAttribute="top" constant="5" id="H4l-Wf-XI3"/>
+                <constraint firstItem="QOn-4d-7kS" firstAttribute="top" secondItem="R6g-zH-Xya" secondAttribute="bottom" constant="10" id="HPg-Wz-IwV"/>
+                <constraint firstItem="ih5-AX-9xy" firstAttribute="centerX" secondItem="JV1-DU-0ke" secondAttribute="centerX" id="faj-s5-84G"/>
+                <constraint firstItem="878-SJ-Jpb" firstAttribute="top" secondItem="QOn-4d-7kS" secondAttribute="bottom" constant="5" id="pN0-NU-noz"/>
+                <constraint firstItem="R6g-zH-Xya" firstAttribute="centerX" secondItem="JV1-DU-0ke" secondAttribute="centerX" id="qlg-Xf-Pj1"/>
+                <constraint firstItem="R6g-zH-Xya" firstAttribute="top" secondItem="ih5-AX-9xy" secondAttribute="bottom" constant="10" id="vJH-7a-ndF"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="iconImg" destination="R6g-zH-Xya" id="7fa-L1-OLs"/>
+                <outlet property="timeLabel" destination="ih5-AX-9xy" id="R3e-4b-wgJ"/>
+                <outlet property="wendu" destination="QOn-4d-7kS" id="lhU-Jc-6ge"/>
+                <outlet property="windLabel" destination="878-SJ-Jpb" id="UMd-xG-Zba"/>
+            </connections>
+            <point key="canvasLocation" x="1117.5" y="-167.5"/>
+        </view>
+    </objects>
+</document>

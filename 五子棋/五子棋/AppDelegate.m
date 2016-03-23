@@ -12,6 +12,7 @@
 #import "UMSocialQQHandler.h"
 #import "MobClick.h"
 #import "MobClickSocialAnalytics.h"
+#import "CCLocationManager.h"
 @interface AppDelegate ()
 
 @end
@@ -20,6 +21,24 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    application.windows.lastObject.backgroundColor = [UIColor colorWithRed:220/255.0 green:220/255.0 blue:220/255.0 alpha:1.0];
+    //获取用户当前所在城市
+    dispatch_async(dispatch_get_main_queue(), ^{
+        CCLocationManager *locationMag = [CCLocationManager shareLocation];
+        [locationMag getCity:^(NSString *addressString) {
+            _cityName = addressString;
+            NSLog(@"!!!!!!!!!!!!!!!!%@",_cityName);
+        }];
+        
+        [locationMag getLocationCoordinate:^(CLLocationCoordinate2D locationCorrrdinate) {
+            _longitude = locationCorrrdinate.longitude;
+            _latitude = locationCorrrdinate.latitude;
+            NSLog(@"!!!!!!!!!!!!!!!!%f--%f",_longitude,_latitude);
+        }];
+    });
+
+    
     
     //启动界面延迟1.5秒
     [NSThread sleepForTimeInterval:1.5];

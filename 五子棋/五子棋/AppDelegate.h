@@ -11,7 +11,12 @@
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+//当前用户所在的城市
+@property(nonatomic,copy) NSString *cityName;
 
+//当前用户所在的城市的经纬度
+@property(nonatomic,assign) double latitude;
+@property(nonatomic,assign) double longitude;
 
 @end
 

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="cVX-p7-X0D">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="cVX-p7-X0D">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -40,10 +40,11 @@
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kDr-KL-ZpH">
                                 <rect key="frame" x="182" y="355" width="236" height="100"/>
+                                <fontDescription key="fontDescription" name="Futura-CondensedExtraBold" family="Futura" pointSize="22"/>
                                 <inset key="titleEdgeInsets" minX="5" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <inset key="imageEdgeInsets" minX="-10" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <state key="normal" title="游戏设置" image="main_setting" backgroundImage="btnBgimg">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" red="0.86274509803921573" green="0.86274509803921573" blue="0.86274509803921573" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="gameSetting:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bvu-NL-Lg3"/>
@@ -55,10 +56,11 @@
                                     <constraint firstAttribute="width" constant="236" id="11H-YY-Jnm"/>
                                     <constraint firstAttribute="height" constant="100" id="dpt-qj-XpR"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" name="Futura-CondensedExtraBold" family="Futura" pointSize="22"/>
                                 <inset key="titleEdgeInsets" minX="5" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <inset key="imageEdgeInsets" minX="-10" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <state key="normal" title="五子趣闻" image="main_news" backgroundImage="btnBgimg">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" red="0.86274509803921573" green="0.86274509803921573" blue="0.86274509803921573" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="konwologe:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yeY-Xf-XuG"/>
@@ -84,10 +86,11 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oVt-NI-RaG">
                                 <rect key="frame" x="218" y="96" width="236" height="100"/>
+                                <fontDescription key="fontDescription" name="Futura-CondensedExtraBold" family="Futura" pointSize="22"/>
                                 <inset key="titleEdgeInsets" minX="5" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <inset key="imageEdgeInsets" minX="-10" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <state key="normal" title="进入游戏" image="main_game" backgroundImage="btnBgimg">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" red="0.86274509803921573" green="0.86274509803921573" blue="0.86274509803921573" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="enterGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YwA-GU-m5b"/>
@@ -402,9 +405,9 @@
         <image name="chessboardBg" width="1229" height="1229"/>
         <image name="logo" width="274" height="106"/>
         <image name="main_bgImage" width="640" height="960"/>
-        <image name="main_game" width="25" height="25"/>
-        <image name="main_news" width="25" height="25"/>
-        <image name="main_setting" width="25" height="25"/>
+        <image name="main_game" width="40" height="40"/>
+        <image name="main_news" width="40" height="40"/>
+        <image name="main_setting" width="40" height="34"/>
         <image name="sidebar_icon" width="22" height="22"/>
         <image name="stone_black" width="80" height="80"/>
         <image name="stone_white" width="80" height="80"/>

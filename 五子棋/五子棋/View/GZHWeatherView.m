@@ -27,7 +27,8 @@
     tmpCustomView.frame = frame;
     //添加视图
     self = (GZHWeatherView *)tmpCustomView;
-    
+//    　NSNumber *bl = (NSNumber*) CFBridgingRelease(CFPreferencesCopyAppValue(CFSTR("SBBacklightLevel" ), CFSTR("com.apple.springboard")));
+//    　previousBacklightLevel = [bl floatValue];
     return self;
 }
 - (void)setModel:(GZHWeatherModel *)model

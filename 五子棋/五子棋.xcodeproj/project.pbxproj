@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		19935C0B8F44519F66D4B5A0 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B7EBD41BB643891110CDD878 /* libPods.a */; };
+		E60BFC651CA421F5007DE974 /* GZHSettingController.m in Sources */ = {isa = PBXBuildFile; fileRef = E60BFC631CA421F5007DE974 /* GZHSettingController.m */; };
+		E60BFC661CA421F5007DE974 /* GZHSettingController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E60BFC641CA421F5007DE974 /* GZHSettingController.xib */; };
 		E6268B031CA02E3500FCA829 /* GZHWeatherController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6268B011CA02E3500FCA829 /* GZHWeatherController.m */; };
 		E6268B041CA02E3500FCA829 /* GZHWeatherController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6268B021CA02E3500FCA829 /* GZHWeatherController.xib */; };
 		E6268B0B1CA0306F00FCA829 /* CCLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E6268B071CA0306F00FCA829 /* CCLocationManager.m */; };
@@ -145,6 +147,9 @@
 		2BC39F85C9F17AFF8EE6BAEB /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		2D4A628CC7016298728A857D /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		B7EBD41BB643891110CDD878 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		E60BFC621CA421F5007DE974 /* GZHSettingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GZHSettingController.h; sourceTree = "<group>"; };
+		E60BFC631CA421F5007DE974 /* GZHSettingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GZHSettingController.m; sourceTree = "<group>"; };
+		E60BFC641CA421F5007DE974 /* GZHSettingController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GZHSettingController.xib; sourceTree = "<group>"; };
 		E6268B001CA02E3500FCA829 /* GZHWeatherController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GZHWeatherController.h; sourceTree = "<group>"; };
 		E6268B011CA02E3500FCA829 /* GZHWeatherController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GZHWeatherController.m; sourceTree = "<group>"; };
 		E6268B021CA02E3500FCA829 /* GZHWeatherController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GZHWeatherController.xib; sourceTree = "<group>"; };
@@ -659,6 +664,9 @@
 				E637FF371C9309BE007953E1 /* GZHExpressController.xib */,
 				E6AB6C411CA2D6C1000AFA76 /* GZHWeatherSuggestionController.h */,
 				E6AB6C421CA2D6C1000AFA76 /* GZHWeatherSuggestionController.m */,
+				E60BFC621CA421F5007DE974 /* GZHSettingController.h */,
+				E60BFC631CA421F5007DE974 /* GZHSettingController.m */,
+				E60BFC641CA421F5007DE974 /* GZHSettingController.xib */,
 			);
 			path = GameSetting;
 			sourceTree = "<group>";
@@ -993,6 +1001,7 @@
 				E6E351171C89F0A800E2FE1F /* UMSLoginViewController.xib in Resources */,
 				E6E351151C89F0A800E2FE1F /* UMShareEditViewController.xib in Resources */,
 				E637FF391C9309BE007953E1 /* GZHExpressController.xib in Resources */,
+				E60BFC661CA421F5007DE974 /* GZHSettingController.xib in Resources */,
 				E6E350691C881E9B00E2FE1F /* check.wav in Resources */,
 				E6E3511A1C89F0A800E2FE1F /* UMSocialSDKResourcesNew.bundle in Resources */,
 				E6E350BA1C8830C000E2FE1F /* GZHNewDetailController.xib in Resources */,
@@ -1119,6 +1128,7 @@
 				E6E350941C881EC300E2FE1F /* GZHGomokuGameSencesViewController.m in Sources */,
 				E6E350501C881E4100E2FE1F /* MJFoundation.m in Sources */,
 				E6AB6C3D1CA2CBCA000AFA76 /* GZHWeatherView.m in Sources */,
+				E60BFC651CA421F5007DE974 /* GZHSettingController.m in Sources */,
 				E6E350081C881CFB00E2FE1F /* DCPicScrollView.m in Sources */,
 				E6E350041C8816B100E2FE1F /* UIView+MJExtension.m in Sources */,
 				E6E3508F1C881EC300E2FE1F /* GZHGomokuChessElement.m in Sources */,

@@ -23,6 +23,7 @@
 #import <ZXingObjC/ZXingObjC.h>
 #import "ScannerViewController.h"
 #import "GZHWeatherController.h"
+#import "GZHSettingController.h"
 @interface ViewController () <AwesomeMenuDelegate,UITableViewDataSource,UITableViewDelegate,MFMailComposeViewControllerDelegate,GZHPetalViewDelegate,ScannerViewControllerDelegate>
 @property (nonatomic,strong) AwesomeMenu *awesome;
 @property (assign, nonatomic) BOOL isShowClass;
@@ -210,6 +211,9 @@
 - (IBAction)gameSetting:(UIButton *)sender {
     
     [self closeRightMoreView];
+    
+    GZHSettingController *setting = [[GZHSettingController alloc]init];
+    [self.navigationController pushViewController:setting animated:YES];
     
 }
 

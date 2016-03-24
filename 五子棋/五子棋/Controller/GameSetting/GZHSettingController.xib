@@ -7,6 +7,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GZHSettingController">
             <connections>
+                <outlet property="SoundBtn" destination="rIh-y4-4po" id="Cmr-et-ueJ"/>
+                <outlet property="bgSoundBtn" destination="CHC-KF-3IX" id="zQm-wf-OdS"/>
                 <outlet property="scrollerview" destination="e0G-8T-s9y" id="ltg-hF-Fuh"/>
                 <outlet property="slider" destination="7dO-Bs-eXW" id="QyH-Tb-brT"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -56,7 +58,7 @@
                             <rect key="frame" x="33" y="157" width="42" height="21"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES"/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" id="7dO-Bs-eXW">

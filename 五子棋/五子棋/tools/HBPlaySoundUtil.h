@@ -18,6 +18,8 @@
 -(id)initForPlayingSoundEffectWith:(NSString *)filename;  //自定义声音
 
 -(void)play;
+- (void)stopBgVoice;
+- (void)playBgVoice;
 
 +(id)shareForPlayingVibrate;
 +(id)sharePlayingSystemSoundEffectWith:(NSString *)resourceName ofType:(NSString *)type;

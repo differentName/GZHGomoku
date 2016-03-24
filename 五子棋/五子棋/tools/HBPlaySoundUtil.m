@@ -7,7 +7,10 @@
 //
 
 #import "HBPlaySoundUtil.h"
-
+#import <AVFoundation/AVFoundation.h>
+@interface HBPlaySoundUtil()
+@property (nonatomic,strong) AVAudioPlayer *player;
+@end
 @implementation HBPlaySoundUtil
 -(id)initForPlayingVibrate
 {
@@ -94,5 +97,18 @@
         [dic setObject:util forKey:filename];
     }
     return util;
+}
+- (void)playBgVoice{
+    AVAudioPlayer *player = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"BgMusic" ofType:@"mp3"]] error:nil];//使用本地URL创建
+    _player = player;
+    player.volume =0.2;//0.0-1.0之间
+    player.numberOfLoops = 99999;//默认只播放一次
+    [player play];//播放
+}
+
+- (void)stopBgVoice{
+    if (_player) {
+        [_player stop];//停止
+    }
 }
 @end

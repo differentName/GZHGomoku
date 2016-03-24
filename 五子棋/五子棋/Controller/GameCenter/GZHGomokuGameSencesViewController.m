@@ -25,6 +25,7 @@
 @property(nonatomic,strong)NSMutableArray * pieces;
 @property(nonatomic)NSInteger undoCount;
 @property(nonatomic,strong)GZHGomokuPieceView * lastSelectPiece;
+@property (nonatomic,strong) HBPlaySoundUtil *soundTool;
 @end
 
 @implementation GZHGomokuGameSencesViewController
@@ -55,9 +56,28 @@
     self.blackChessMan.textColor=color;
     self.whiteChessMan.textColor=color;
     
-    NSNumber* number=[[NSUserDefaults standardUserDefaults] objectForKey:@"soundOpen"];
-    if (number) {
-        [self.btnSound setSelected:!number.boolValue];
+//    NSNumber* number=[[NSUserDefaults standardUserDefaults] objectForKey:@"soundOpen"];
+    //获取Documents目录
+     NSString *docPath = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
+     //还要指定存储文件的文件名称,仍然使用字符串拼接
+    NSString *filePath = [docPath stringByAppendingPathComponent:@"test.plist"];
+    //使用一个字典来接受数据
+    NSDictionary *dict = [NSDictionary dictionaryWithContentsOfFile:filePath];
+    NSNumber *number = [dict objectForKey:@"soundOpen"];
+    if ([number intValue]==1) {
+        //        [self.btnSound setSelected:!number.boolValue];
+        self.btnSound.selected = YES;
+        self.soundOpen = YES;
+        [self btnSoundAction:self.btnSound];
+    }else{
+        self.btnSound.selected = NO;
+        self.soundOpen = NO;
+        [self btnSoundAction:self.btnSound];
+    }
+    if (dict == nil) {
+        self.btnSound.selected = YES;
+        self.soundOpen =YES;
+        [self btnSoundAction:self.btnSound];
     }
     _pieces=[NSMutableArray array];
     number=[[NSUserDefaults standardUserDefaults] objectForKey:@"playerFirst"];
@@ -88,6 +108,7 @@
     [self.navigationController.navigationBar setTitleTextAttributes:
      @{NSFontAttributeName:[UIFont boldSystemFontOfSize:17],
        NSForegroundColorAttributeName:[UIColor whiteColor]}];
+
 }
 //返回上层界面
 - (void)back{
@@ -99,12 +120,39 @@
     [super viewWillAppear:animated];
     
     self.navigationController.navigationBarHidden = NO;
+    
+    //每次进入界面重新开盘
+    GZHGomokuGameEngine *engine = [GZHGomokuGameEngine game];
+    [engine reStart];
+    
+    //获取Documents目录
+    NSString *docPath = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
+    //还要指定存储文件的文件名称,仍然使用字符串拼接
+    NSString *filePath = [docPath stringByAppendingPathComponent:@"test2.plist"];
+    //使用一个字典来接受数据
+    NSDictionary *dict = [NSDictionary dictionaryWithContentsOfFile:filePath];
+    NSNumber *number = [dict objectForKey:@"bgSoundOpen"];
+    if ([number intValue]==1 || dict == nil) {
+//        [[HBPlaySoundUtil shareForPlayingSoundEffectWith:@"pipa.mp3"] play];
+       HBPlaySoundUtil *soundTool = [[HBPlaySoundUtil alloc]init];
+        self.soundTool = soundTool;
+        [soundTool playBgVoice];
+    }else{
+        if (self.soundTool) {
+            
+            [self.soundTool stopBgVoice];
+        }
+    }
 }
 
 - (void)viewWillDisappear:(BOOL)animated
 {
     [super viewWillDisappear:animated];
     self.navigationController.navigationBarHidden = YES;
+    if (self.soundTool) {
+        
+        [self.soundTool stopBgVoice];
+    }
 }
 
 
@@ -164,8 +212,14 @@
     self.btnSound.selected=!self.btnSound.selected;
     self.soundOpen=!self.btnSound.selected;
     NSNumber * number=[NSNumber numberWithBool:!self.btnSound.selected];
-    [[NSUserDefaults standardUserDefaults] setObject:number forKey:@"soundOpen"];
-    [[NSUserDefaults standardUserDefaults] synchronize];
+
+    NSString *docPath = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
+    //还要指定存储文件的文件名称,仍然使用字符串拼接
+    NSString *filePath = [docPath stringByAppendingPathComponent:@"test.plist"];
+    //新建一个字典
+    NSDictionary *array = @{@"soundOpen":number};
+    //将数组存储到文件中
+    [array writeToFile:filePath atomically:YES];
 }
 -(IBAction)btnRestartAction:(id)sender
 {

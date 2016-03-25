@@ -20,6 +20,9 @@
 		E637FF391C9309BE007953E1 /* GZHExpressController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E637FF371C9309BE007953E1 /* GZHExpressController.xib */; };
 		E637FF3C1C932703007953E1 /* GZHExpressModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E637FF3B1C932703007953E1 /* GZHExpressModel.m */; };
 		E637FF3F1C933690007953E1 /* ScannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E637FF3E1C933690007953E1 /* ScannerViewController.m */; };
+		E64BC0111CA5AAFA00E7870E /* GZHExplainController.m in Sources */ = {isa = PBXBuildFile; fileRef = E64BC00F1CA5AAFA00E7870E /* GZHExplainController.m */; };
+		E64BC0121CA5AAFA00E7870E /* GZHExplainController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E64BC0101CA5AAFA00E7870E /* GZHExplainController.xib */; };
+		E64BC0141CA5AB8000E7870E /* 五子棋技巧图解.pdf in Resources */ = {isa = PBXBuildFile; fileRef = E64BC0131CA5AB8000E7870E /* 五子棋技巧图解.pdf */; };
 		E6AB6C361CA238CF000AFA76 /* GZHWeatherModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E6AB6C351CA238CF000AFA76 /* GZHWeatherModel.m */; };
 		E6AB6C3D1CA2CBCA000AFA76 /* GZHWeatherView.m in Sources */ = {isa = PBXBuildFile; fileRef = E6AB6C3C1CA2CBCA000AFA76 /* GZHWeatherView.m */; };
 		E6AB6C3F1CA2CBD5000AFA76 /* GZHWeatherView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6AB6C3E1CA2CBD5000AFA76 /* GZHWeatherView.xib */; };
@@ -166,6 +169,10 @@
 		E637FF3B1C932703007953E1 /* GZHExpressModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GZHExpressModel.m; sourceTree = "<group>"; };
 		E637FF3D1C933690007953E1 /* ScannerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScannerViewController.h; sourceTree = "<group>"; };
 		E637FF3E1C933690007953E1 /* ScannerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScannerViewController.m; sourceTree = "<group>"; };
+		E64BC00E1CA5AAFA00E7870E /* GZHExplainController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GZHExplainController.h; sourceTree = "<group>"; };
+		E64BC00F1CA5AAFA00E7870E /* GZHExplainController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GZHExplainController.m; sourceTree = "<group>"; };
+		E64BC0101CA5AAFA00E7870E /* GZHExplainController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GZHExplainController.xib; sourceTree = "<group>"; };
+		E64BC0131CA5AB8000E7870E /* 五子棋技巧图解.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "五子棋技巧图解.pdf"; sourceTree = "<group>"; };
 		E6AB6C341CA238CF000AFA76 /* GZHWeatherModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GZHWeatherModel.h; sourceTree = "<group>"; };
 		E6AB6C351CA238CF000AFA76 /* GZHWeatherModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GZHWeatherModel.m; sourceTree = "<group>"; };
 		E6AB6C3B1CA2CBCA000AFA76 /* GZHWeatherView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GZHWeatherView.h; sourceTree = "<group>"; };
@@ -667,6 +674,9 @@
 				E60BFC621CA421F5007DE974 /* GZHSettingController.h */,
 				E60BFC631CA421F5007DE974 /* GZHSettingController.m */,
 				E60BFC641CA421F5007DE974 /* GZHSettingController.xib */,
+				E64BC00E1CA5AAFA00E7870E /* GZHExplainController.h */,
+				E64BC00F1CA5AAFA00E7870E /* GZHExplainController.m */,
+				E64BC0101CA5AAFA00E7870E /* GZHExplainController.xib */,
 			);
 			path = GameSetting;
 			sourceTree = "<group>";
@@ -824,6 +834,7 @@
 				E6E350291C881E2200E2FE1F /* View */,
 				E6E34FAA1C8813B300E2FE1F /* thirdPart */,
 				E6E34FA61C88133300E2FE1F /* tools */,
+				E64BC0131CA5AB8000E7870E /* 五子棋技巧图解.pdf */,
 				E6E9F9D11C86E92C006D4268 /* AppDelegate.h */,
 				E6E9F9D21C86E92C006D4268 /* AppDelegate.m */,
 				E6E9F9D71C86E92C006D4268 /* Main.storyboard */,
@@ -1002,8 +1013,10 @@
 				E6E351151C89F0A800E2FE1F /* UMShareEditViewController.xib in Resources */,
 				E637FF391C9309BE007953E1 /* GZHExpressController.xib in Resources */,
 				E60BFC661CA421F5007DE974 /* GZHSettingController.xib in Resources */,
+				E64BC0121CA5AAFA00E7870E /* GZHExplainController.xib in Resources */,
 				E6E350691C881E9B00E2FE1F /* check.wav in Resources */,
 				E6E3511A1C89F0A800E2FE1F /* UMSocialSDKResourcesNew.bundle in Resources */,
+				E64BC0141CA5AB8000E7870E /* 五子棋技巧图解.pdf in Resources */,
 				E6E350BA1C8830C000E2FE1F /* GZHNewDetailController.xib in Resources */,
 				E6E34FFD1C8816B100E2FE1F /* MJRefresh.bundle in Resources */,
 				E6E3506E1C881E9B00E2FE1F /* pipa.mp3 in Resources */,
@@ -1130,6 +1143,7 @@
 				E6AB6C3D1CA2CBCA000AFA76 /* GZHWeatherView.m in Sources */,
 				E60BFC651CA421F5007DE974 /* GZHSettingController.m in Sources */,
 				E6E350081C881CFB00E2FE1F /* DCPicScrollView.m in Sources */,
+				E64BC0111CA5AAFA00E7870E /* GZHExplainController.m in Sources */,
 				E6E350041C8816B100E2FE1F /* UIView+MJExtension.m in Sources */,
 				E6E3508F1C881EC300E2FE1F /* GZHGomokuChessElement.m in Sources */,
 				E6E350011C8816B100E2FE1F /* MJRefreshHeaderView.m in Sources */,

@@ -7,7 +7,7 @@
 //
 
 #import "GZHSettingController.h"
-
+#import "GZHExplainController.h"
 @interface GZHSettingController ()
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollerview;
 @property (weak, nonatomic) IBOutlet UISlider *slider;
@@ -132,6 +132,8 @@
 
 }
 - (IBAction)explain:(UIButton *)sender {
+    
+    [self.navigationController pushViewController:[[GZHExplainController alloc] init] animated:YES];
 }
 
 - (IBAction)change:(UIButton *)sender {

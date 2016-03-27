@@ -41,7 +41,6 @@
     }
     self.view.backgroundColor=[UIColor colorWithIntegerValue:BACKGROUND_COLOR alpha:1];
     self.backView.image=self.backImage;
-    
 }
 
 - (void)didReceiveMemoryWarning

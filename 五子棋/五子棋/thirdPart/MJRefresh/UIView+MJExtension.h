@@ -15,4 +15,6 @@
 @property (assign, nonatomic) CGFloat mj_height;
 @property (assign, nonatomic) CGSize mj_size;
 @property (assign, nonatomic) CGPoint mj_origin;
+@property (nonatomic, assign) CGFloat centerX;
+@property (nonatomic, assign) CGFloat centerY;
 @end

@@ -11,7 +11,8 @@
 #import "HBPlaySoundUtil.h"
 #import "UIColor+setting.h"
 #import "GZHGomokuOverViewController.h"
-
+#import "UMSocial.h"
+#import "CLAnimationView.h"
 @interface GZHGomokuGameSencesViewController ()
 @property(nonatomic,weak)IBOutlet UIView * boardView;
 @property(nonatomic,strong)GZHGomokuGameEngine * game;
@@ -26,6 +27,9 @@
 @property(nonatomic)NSInteger undoCount;
 @property(nonatomic,strong)GZHGomokuPieceView * lastSelectPiece;
 @property (nonatomic,strong) HBPlaySoundUtil *soundTool;
+@property (weak, nonatomic) IBOutlet UIImageView *bgImg;
+
+
 @end
 
 @implementation GZHGomokuGameSencesViewController
@@ -99,6 +103,9 @@
     //设置返回按钮
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"bn_back"] style:UIBarButtonItemStyleDone target:self action:@selector(back)];
     
+    //设置截屏分享按钮
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"export"] style:UIBarButtonItemStyleDone target:self action:@selector(cutOffToShare)];
+    
     self.title = @"五子棋";
     
     //设置导航栏背景颜色图片
@@ -114,16 +121,69 @@
 - (void)back{
     [self.navigationController popViewControllerAnimated:YES];
 }
+//截屏分享工功能
+- (void)cutOffToShare{
+#warning - mark 这个地址等版本功能完善后改为蒲公英对应的下载的地址  另外关于我们模块中的二维码也要更新
+        CLAnimationView *animationView = [[CLAnimationView alloc]initWithTitleArray:@[@"微博",@"微信",@"朋友圈",@"QQ"] picarray:@[@"share_page_weibo_icon",@"share_page_wechat_icon",@"share_page_wechat_moment_icon",@"share_page_qq_icon"]];
+        [animationView selectedWithIndex:^(NSInteger index) {
+            NSLog(@"你选择的index ＝＝ %ld",(long)index);
+            [self shareWithIndex:index Content:[NSString stringWithFormat:@"我正在这:http://www.baidu.com 大战机器人 你觉得我前途命运如何?"] Img:nil];
+        }];
+        [animationView CLBtnBlock:^(UIButton *btn) {
+            NSLog(@"你点了取消按钮");
+        }];
+        
+        [animationView show];
+    
+}
+
+- (void)shareWithIndex:(NSInteger)index Content:(NSString *)content Img:(NSString *)img{
+    [[UMSocialControllerService defaultControllerService] setShareText:content.length>0?content:@"快来和我一决高下!"  shareImage:[self captureView:self.boardView] socialUIDelegate:nil];
+    switch (index) {
+        case 1:
+            NSLog(@"分享到微博");
+            [UMSocialSnsPlatformManager getSocialPlatformWithName:UMShareToSina].snsClickHandler(self,[UMSocialControllerService defaultControllerService],YES);
+            
+            break;
+        case 2:
+            NSLog(@"分享到微信");
+            [UMSocialSnsPlatformManager getSocialPlatformWithName:UMShareToWechatSession].snsClickHandler(self,[UMSocialControllerService defaultControllerService],YES);
+            break;
+            
+        case 3:
+            NSLog(@"分享到朋友圈");
+            [UMSocialSnsPlatformManager getSocialPlatformWithName:UMShareToWechatTimeline].snsClickHandler(self,[UMSocialControllerService defaultControllerService],YES);
+            break;
+            
+        case 4:
+            NSLog(@"分享到QQ");
+            [UMSocialSnsPlatformManager getSocialPlatformWithName:UMShareToQQ].snsClickHandler(self,[UMSocialControllerService defaultControllerService],YES);
+            break;
+        default:
+            break;
+    }
+    
+}
+//截取当前屏幕
+-(UIImage*)captureView:(UIView *)theView{
+    CGRect rect = theView.frame;
+    if ([theView isKindOfClass:[UIScrollView class]]) {
+        rect.size = ((UIScrollView *)theView).contentSize;
+    }
+    
+    UIGraphicsBeginImageContext(rect.size);
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    [theView.layer renderInContext:context];
+    UIImage *img = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return img;
+}
 
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
     
     self.navigationController.navigationBarHidden = NO;
-    
-    //每次进入界面重新开盘
-    GZHGomokuGameEngine *engine = [GZHGomokuGameEngine game];
-    [engine reStart];
     
     //获取Documents目录
     NSString *docPath = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
@@ -143,6 +203,18 @@
             [self.soundTool stopBgVoice];
         }
     }
+    
+    
+    NSString *filePath2 = [docPath stringByAppendingPathComponent:@"test3.plist"];
+    //使用一个字典来接受数据
+    NSDictionary *dict2 = [NSDictionary dictionaryWithContentsOfFile:filePath2];
+    if (dict2==nil) {
+        self.bgImg.image = [UIImage imageNamed:@"background_0"];
+    }else{
+        NSString *currentImgName = [dict2 objectForKey:@"currentBgImgName"];
+        self.bgImg.image = [UIImage imageNamed:[NSString stringWithFormat:@"background_%@",[currentImgName componentsSeparatedByString:@"_"].lastObject]];
+    }
+    
 }
 
 - (void)viewWillDisappear:(BOOL)animated

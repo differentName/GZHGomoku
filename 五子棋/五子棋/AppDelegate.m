@@ -13,8 +13,9 @@
 #import "MobClick.h"
 #import "MobClickSocialAnalytics.h"
 #import "CCLocationManager.h"
-@interface AppDelegate ()
-
+#import "GZHFeatureVC.h"
+@interface AppDelegate ()<CLLocationManagerDelegate>
+@property (nonatomic,strong) CCLocationManager *locationMag;
 @end
 
 @implementation AppDelegate
@@ -22,24 +23,29 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
+    //创建窗口  并作为主窗口显示出来
+    UIWindow *window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
+    window.backgroundColor = [UIColor whiteColor];
+    [window makeKeyAndVisible];
+    self.window = window;
+    
+    
     application.windows.lastObject.backgroundColor = [UIColor colorWithRed:220/255.0 green:220/255.0 blue:220/255.0 alpha:1.0];
     //获取用户当前所在城市
     dispatch_async(dispatch_get_main_queue(), ^{
-        CCLocationManager *locationMag = [CCLocationManager shareLocation];
-        [locationMag getCity:^(NSString *addressString) {
+        self.locationMag = [CCLocationManager shareLocation];
+        [self.locationMag getCity:^(NSString *addressString) {
             _cityName = addressString;
             NSLog(@"!!!!!!!!!!!!!!!!%@",_cityName);
         }];
         
-        [locationMag getLocationCoordinate:^(CLLocationCoordinate2D locationCorrrdinate) {
+        [self.locationMag getLocationCoordinate:^(CLLocationCoordinate2D locationCorrrdinate) {
             _longitude = locationCorrrdinate.longitude;
             _latitude = locationCorrrdinate.latitude;
             NSLog(@"!!!!!!!!!!!!!!!!%f--%f",_longitude,_latitude);
         }];
     });
 
-    
-    
     //启动界面延迟1.5秒
     [NSThread sleepForTimeInterval:1.5];
     
@@ -51,8 +57,29 @@
     
     //友盟分析
     [MobClick startWithAppkey:@"56dcfeec67e58e6f530020d5" reportPolicy:BATCH   channelId:@""];
+    
+    [self isShowFeature];
 
     return YES;
+}
+- (void)isShowFeature{
+    /**判断是否显示版本新特性*/
+    UIWindow *window = [UIApplication sharedApplication].keyWindow;
+    //1>读取上次打开此软件时的版本号（上次的版本号存在沙盒里，从沙盒中读取）
+    NSString *lastVersion = [[NSUserDefaults standardUserDefaults]objectForKey:@"version"];
+    //2>读取这个打开时软件的版本号（存储在info.plist文件中）
+    NSString *currentVersion = [NSBundle mainBundle].infoDictionary[@"CFBundleVersion"];
+    //3>比较两个版本号是否相同，相同则不展示，不相同则展示版本新特性
+    NSLog(@"%@---%@",lastVersion,currentVersion);
+    if ([currentVersion isEqualToString:lastVersion]) {//前后版本相同  不展示版本新特性
+        window.rootViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"GZHHomeController"];
+    }else{
+        GZHFeatureVC *featureVc = [[GZHFeatureVC alloc]init];
+        window.rootViewController = featureVc;
+        //将这个的版本号存储在沙盒里，key就是1>读取沙盒信息的那个key
+        [[NSUserDefaults standardUserDefaults] setObject:currentVersion forKey:@"version"];
+        [[NSUserDefaults standardUserDefaults]synchronize];//立即同步
+    }
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

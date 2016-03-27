@@ -23,6 +23,7 @@
 		E64BC0111CA5AAFA00E7870E /* GZHExplainController.m in Sources */ = {isa = PBXBuildFile; fileRef = E64BC00F1CA5AAFA00E7870E /* GZHExplainController.m */; };
 		E64BC0121CA5AAFA00E7870E /* GZHExplainController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E64BC0101CA5AAFA00E7870E /* GZHExplainController.xib */; };
 		E64BC0141CA5AB8000E7870E /* 五子棋技巧图解.pdf in Resources */ = {isa = PBXBuildFile; fileRef = E64BC0131CA5AB8000E7870E /* 五子棋技巧图解.pdf */; };
+		E64BC0201CA7CDE600E7870E /* GZHFeatureVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E64BC01F1CA7CDE600E7870E /* GZHFeatureVC.m */; };
 		E6AB6C361CA238CF000AFA76 /* GZHWeatherModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E6AB6C351CA238CF000AFA76 /* GZHWeatherModel.m */; };
 		E6AB6C3D1CA2CBCA000AFA76 /* GZHWeatherView.m in Sources */ = {isa = PBXBuildFile; fileRef = E6AB6C3C1CA2CBCA000AFA76 /* GZHWeatherView.m */; };
 		E6AB6C3F1CA2CBD5000AFA76 /* GZHWeatherView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6AB6C3E1CA2CBD5000AFA76 /* GZHWeatherView.xib */; };
@@ -173,6 +174,8 @@
 		E64BC00F1CA5AAFA00E7870E /* GZHExplainController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GZHExplainController.m; sourceTree = "<group>"; };
 		E64BC0101CA5AAFA00E7870E /* GZHExplainController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GZHExplainController.xib; sourceTree = "<group>"; };
 		E64BC0131CA5AB8000E7870E /* 五子棋技巧图解.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "五子棋技巧图解.pdf"; sourceTree = "<group>"; };
+		E64BC01E1CA7CDE600E7870E /* GZHFeatureVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GZHFeatureVC.h; sourceTree = "<group>"; };
+		E64BC01F1CA7CDE600E7870E /* GZHFeatureVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GZHFeatureVC.m; sourceTree = "<group>"; };
 		E6AB6C341CA238CF000AFA76 /* GZHWeatherModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GZHWeatherModel.h; sourceTree = "<group>"; };
 		E6AB6C351CA238CF000AFA76 /* GZHWeatherModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GZHWeatherModel.m; sourceTree = "<group>"; };
 		E6AB6C3B1CA2CBCA000AFA76 /* GZHWeatherView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GZHWeatherView.h; sourceTree = "<group>"; };
@@ -660,6 +663,8 @@
 		E6E3508B1C881EC300E2FE1F /* GameSetting */ = {
 			isa = PBXGroup;
 			children = (
+				E64BC01E1CA7CDE600E7870E /* GZHFeatureVC.h */,
+				E64BC01F1CA7CDE600E7870E /* GZHFeatureVC.m */,
 				E6268B001CA02E3500FCA829 /* GZHWeatherController.h */,
 				E6268B011CA02E3500FCA829 /* GZHWeatherController.m */,
 				E6268B021CA02E3500FCA829 /* GZHWeatherController.xib */,
@@ -1169,6 +1174,7 @@
 				E6E34FC21C8813CA00E2FE1F /* AFNetworkReachabilityManager.m in Sources */,
 				E6E350961C881EC300E2FE1F /* GZHGomokuOverViewController.m in Sources */,
 				E6EC75D71C8E733F00E02405 /* AwesomeMenu.m in Sources */,
+				E64BC0201CA7CDE600E7870E /* GZHFeatureVC.m in Sources */,
 				E6E350581C881E4100E2FE1F /* NSString+MJExtension.m in Sources */,
 				E6268B0C1CA0306F00FCA829 /* CLLocation+YCLocation.m in Sources */,
 				E6E3504F1C881E4100E2FE1F /* MJExtensionConst.m in Sources */,

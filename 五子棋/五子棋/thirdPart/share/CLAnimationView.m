@@ -122,7 +122,7 @@
 /**展示分享view*/
 -(void)show
 {
-    UIWindow *window = [[UIApplication sharedApplication].windows firstObject];
+    UIWindow *window = [UIApplication sharedApplication].keyWindow;
     [window addSubview:self];
     self.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0];
     [UIView animateWithDuration:0.2 animations:^{

@@ -93,6 +93,20 @@
     [super viewWillAppear:animated];
     
     self.navigationController.navigationBarHidden = NO;
+    
+    NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
+    [formatter setDateFormat:@"HH"];
+    NSString *dataStr = [formatter stringFromDate:[NSDate date]];
+    int time = [dataStr intValue];
+    
+    if (time>=18||time<=06) {//晚上
+        self.bottleView.backgroundColor = [UIColor colorWithWhite:1 alpha:0.6];
+    }
+    else{//早上
+        self.bottleView.backgroundColor = [UIColor clearColor];
+    }
+    
+
 }
 
 - (void)viewWillDisappear:(BOOL)animated
@@ -125,6 +139,7 @@
     [MBProgressHUD hideHUD];
     NSMutableDictionary *dict = [NSMutableDictionary dictionary];
     dict[@"key"] = @"CH1NOVBKN1";
+    NSLog(@"%f---%f",_lat,_lon);
     if (_apppdelegate.latitude && _apppdelegate.longitude) {
         dict[@"city"] = [NSString stringWithFormat:@"%f:%f",_lat,_lon];
     }else{

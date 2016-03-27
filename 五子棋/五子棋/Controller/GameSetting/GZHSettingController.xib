@@ -9,6 +9,7 @@
             <connections>
                 <outlet property="SoundBtn" destination="rIh-y4-4po" id="Cmr-et-ueJ"/>
                 <outlet property="bgSoundBtn" destination="CHC-KF-3IX" id="zQm-wf-OdS"/>
+                <outlet property="currentImg" destination="mN3-gN-Cbq" id="1dx-Mc-51R"/>
                 <outlet property="scrollerview" destination="e0G-8T-s9y" id="ltg-hF-Fuh"/>
                 <outlet property="slider" destination="7dO-Bs-eXW" id="QyH-Tb-brT"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -109,6 +110,10 @@
                                 <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
                         </button>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background12" id="mN3-gN-Cbq">
+                            <rect key="frame" x="251" y="228" width="40" height="40"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES"/>
+                        </imageView>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                 </scrollView>
@@ -119,6 +124,7 @@
         </view>
     </objects>
     <resources>
+        <image name="background12" width="451" height="640"/>
         <image name="background17" width="650" height="833"/>
         <image name="brightness-0" width="30" height="30"/>
         <image name="checkbox" width="12" height="12"/>

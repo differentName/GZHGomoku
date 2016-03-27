@@ -70,8 +70,8 @@
     
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(alreadyShow) name:@"alreadyShow" object:nil];
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(alreadyHidden) name:@"alreadyHidden" object:nil];
-    
 }
+
 //分享花瓣展开时
 - (void)alreadyShow{
     [self btnIsUserInteractionEnabled:NO];
@@ -194,6 +194,10 @@
     
     [self closeRightMoreView];
     UIStoryboard *three=[UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    
+    //每次进入界面重新开盘
+    GZHGomokuGameEngine *engine = [GZHGomokuGameEngine game];
+    [engine reStart];
     
     [self.navigationController pushViewController:[three instantiateViewControllerWithIdentifier:@"GZHGomokuGameSencesViewController"] animated:YES];
 }
@@ -328,8 +332,8 @@
 - (void)GZHPetalView:(GZHPetalView *)menu didSelectedButtonAtIndex:(NSUInteger)index{
     
     [menu hide];
-    
-    [[UMSocialControllerService defaultControllerService] setShareText:@"最近我在玩:五子棋 华丽的界面、高超的棋艺、方便的操作,真是刺激,快快来和我一决高下吧!,我在这等你哦:http:www.baidu.com" shareImage:[UIImage imageNamed:@"icon"] socialUIDelegate:nil];
+#warning - mark 这个地址等版本功能完善后改为蒲公英对应的下载的地址  另外关于我们模块中的二维码也要更新
+    [[UMSocialControllerService defaultControllerService] setShareText:@"最近我在玩:五子棋 华丽的界面、高超的棋艺、方便的操作,真是刺激,快快来和我一决高下吧!,我在这等你哦:http://www.baidu.com" shareImage:[UIImage imageNamed:@"icon"] socialUIDelegate:nil];
     
     switch (index) {
         case 0://微博

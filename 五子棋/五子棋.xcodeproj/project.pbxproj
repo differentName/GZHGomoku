@@ -15,7 +15,6 @@
 		E6268B0B1CA0306F00FCA829 /* CCLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E6268B071CA0306F00FCA829 /* CCLocationManager.m */; };
 		E6268B0C1CA0306F00FCA829 /* CLLocation+YCLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = E6268B091CA0306F00FCA829 /* CLLocation+YCLocation.m */; };
 		E6268B0D1CA0306F00FCA829 /* read.text in Sources */ = {isa = PBXBuildFile; fileRef = E6268B0A1CA0306F00FCA829 /* read.text */; };
-		E6268B101CA056A900FCA829 /* Foundation+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = E6268B0F1CA056A900FCA829 /* Foundation+Log.m */; };
 		E637FF381C9309BE007953E1 /* GZHExpressController.m in Sources */ = {isa = PBXBuildFile; fileRef = E637FF361C9309BE007953E1 /* GZHExpressController.m */; };
 		E637FF391C9309BE007953E1 /* GZHExpressController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E637FF371C9309BE007953E1 /* GZHExpressController.xib */; };
 		E637FF3C1C932703007953E1 /* GZHExpressModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E637FF3B1C932703007953E1 /* GZHExpressModel.m */; };
@@ -24,6 +23,12 @@
 		E64BC0121CA5AAFA00E7870E /* GZHExplainController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E64BC0101CA5AAFA00E7870E /* GZHExplainController.xib */; };
 		E64BC0141CA5AB8000E7870E /* 五子棋技巧图解.pdf in Resources */ = {isa = PBXBuildFile; fileRef = E64BC0131CA5AB8000E7870E /* 五子棋技巧图解.pdf */; };
 		E64BC0201CA7CDE600E7870E /* GZHFeatureVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E64BC01F1CA7CDE600E7870E /* GZHFeatureVC.m */; };
+		E64BC0261CA83EA300E7870E /* GZHSQLTool.m in Sources */ = {isa = PBXBuildFile; fileRef = E64BC0251CA83EA300E7870E /* GZHSQLTool.m */; };
+		E64BC0331CA83F9F00E7870E /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = E64BC0291CA83F9F00E7870E /* FMDatabase.m */; };
+		E64BC0341CA83F9F00E7870E /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = E64BC02B1CA83F9F00E7870E /* FMDatabaseAdditions.m */; };
+		E64BC0351CA83F9F00E7870E /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = E64BC02D1CA83F9F00E7870E /* FMDatabasePool.m */; };
+		E64BC0361CA83F9F00E7870E /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = E64BC02F1CA83F9F00E7870E /* FMDatabaseQueue.m */; };
+		E64BC0371CA83F9F00E7870E /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = E64BC0321CA83F9F00E7870E /* FMResultSet.m */; };
 		E6AB6C361CA238CF000AFA76 /* GZHWeatherModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E6AB6C351CA238CF000AFA76 /* GZHWeatherModel.m */; };
 		E6AB6C3D1CA2CBCA000AFA76 /* GZHWeatherView.m in Sources */ = {isa = PBXBuildFile; fileRef = E6AB6C3C1CA2CBCA000AFA76 /* GZHWeatherView.m */; };
 		E6AB6C3F1CA2CBD5000AFA76 /* GZHWeatherView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6AB6C3E1CA2CBD5000AFA76 /* GZHWeatherView.xib */; };
@@ -162,7 +167,6 @@
 		E6268B081CA0306F00FCA829 /* CLLocation+YCLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CLLocation+YCLocation.h"; sourceTree = "<group>"; };
 		E6268B091CA0306F00FCA829 /* CLLocation+YCLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CLLocation+YCLocation.m"; sourceTree = "<group>"; };
 		E6268B0A1CA0306F00FCA829 /* read.text */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = read.text; sourceTree = "<group>"; };
-		E6268B0F1CA056A900FCA829 /* Foundation+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Foundation+Log.m"; sourceTree = "<group>"; };
 		E637FF351C9309BE007953E1 /* GZHExpressController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GZHExpressController.h; sourceTree = "<group>"; };
 		E637FF361C9309BE007953E1 /* GZHExpressController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GZHExpressController.m; sourceTree = "<group>"; };
 		E637FF371C9309BE007953E1 /* GZHExpressController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GZHExpressController.xib; sourceTree = "<group>"; };
@@ -176,6 +180,19 @@
 		E64BC0131CA5AB8000E7870E /* 五子棋技巧图解.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "五子棋技巧图解.pdf"; sourceTree = "<group>"; };
 		E64BC01E1CA7CDE600E7870E /* GZHFeatureVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GZHFeatureVC.h; sourceTree = "<group>"; };
 		E64BC01F1CA7CDE600E7870E /* GZHFeatureVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GZHFeatureVC.m; sourceTree = "<group>"; };
+		E64BC0241CA83EA300E7870E /* GZHSQLTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GZHSQLTool.h; sourceTree = "<group>"; };
+		E64BC0251CA83EA300E7870E /* GZHSQLTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GZHSQLTool.m; sourceTree = "<group>"; };
+		E64BC0281CA83F9F00E7870E /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
+		E64BC0291CA83F9F00E7870E /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
+		E64BC02A1CA83F9F00E7870E /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		E64BC02B1CA83F9F00E7870E /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		E64BC02C1CA83F9F00E7870E /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
+		E64BC02D1CA83F9F00E7870E /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
+		E64BC02E1CA83F9F00E7870E /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
+		E64BC02F1CA83F9F00E7870E /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
+		E64BC0301CA83F9F00E7870E /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
+		E64BC0311CA83F9F00E7870E /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
+		E64BC0321CA83F9F00E7870E /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
 		E6AB6C341CA238CF000AFA76 /* GZHWeatherModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GZHWeatherModel.h; sourceTree = "<group>"; };
 		E6AB6C351CA238CF000AFA76 /* GZHWeatherModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GZHWeatherModel.m; sourceTree = "<group>"; };
 		E6AB6C3B1CA2CBCA000AFA76 /* GZHWeatherView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GZHWeatherView.h; sourceTree = "<group>"; };
@@ -435,10 +452,29 @@
 			path = "获取当前位置信息CCLocation";
 			sourceTree = "<group>";
 		};
+		E64BC0271CA83F9F00E7870E /* fmdb--SQL */ = {
+			isa = PBXGroup;
+			children = (
+				E64BC0281CA83F9F00E7870E /* FMDatabase.h */,
+				E64BC0291CA83F9F00E7870E /* FMDatabase.m */,
+				E64BC02A1CA83F9F00E7870E /* FMDatabaseAdditions.h */,
+				E64BC02B1CA83F9F00E7870E /* FMDatabaseAdditions.m */,
+				E64BC02C1CA83F9F00E7870E /* FMDatabasePool.h */,
+				E64BC02D1CA83F9F00E7870E /* FMDatabasePool.m */,
+				E64BC02E1CA83F9F00E7870E /* FMDatabaseQueue.h */,
+				E64BC02F1CA83F9F00E7870E /* FMDatabaseQueue.m */,
+				E64BC0301CA83F9F00E7870E /* FMDB.h */,
+				E64BC0311CA83F9F00E7870E /* FMResultSet.h */,
+				E64BC0321CA83F9F00E7870E /* FMResultSet.m */,
+			);
+			path = "fmdb--SQL";
+			sourceTree = "<group>";
+		};
 		E6E34FA61C88133300E2FE1F /* tools */ = {
 			isa = PBXGroup;
 			children = (
-				E6268B0F1CA056A900FCA829 /* Foundation+Log.m */,
+				E64BC0241CA83EA300E7870E /* GZHSQLTool.h */,
+				E64BC0251CA83EA300E7870E /* GZHSQLTool.m */,
 				E6E350091C881E0C00E2FE1F /* HBPlaySoundUtil.h */,
 				E6E3500A1C881E0C00E2FE1F /* HBPlaySoundUtil.m */,
 				E6E3500B1C881E0C00E2FE1F /* UIColor+setting.h */,
@@ -452,6 +488,7 @@
 		E6E34FAA1C8813B300E2FE1F /* thirdPart */ = {
 			isa = PBXGroup;
 			children = (
+				E64BC0271CA83F9F00E7870E /* fmdb--SQL */,
 				E6268B051CA0306F00FCA829 /* 获取当前位置信息CCLocation */,
 				E637FF3D1C933690007953E1 /* ScannerViewController.h */,
 				E637FF3E1C933690007953E1 /* ScannerViewController.m */,
@@ -1123,6 +1160,7 @@
 				E6E34FBF1C8813CA00E2FE1F /* AFHTTPRequestOperation.m in Sources */,
 				E6E350031C8816B100E2FE1F /* UIScrollView+MJRefresh.m in Sources */,
 				E6E350521C881E4100E2FE1F /* MJPropertyKey.m in Sources */,
+				E64BC0261CA83EA300E7870E /* GZHSQLTool.m in Sources */,
 				E6E350021C8816B100E2FE1F /* UIScrollView+MJExtension.m in Sources */,
 				E6E34FC11C8813CA00E2FE1F /* AFHTTPSessionManager.m in Sources */,
 				E6E350B31C8827DB00E2FE1F /* MBProgressHUD+MJ.m in Sources */,
@@ -1134,7 +1172,6 @@
 				E6E34FC51C8813CA00E2FE1F /* AFURLRequestSerialization.m in Sources */,
 				E6AB6C361CA238CF000AFA76 /* GZHWeatherModel.m in Sources */,
 				E6E34FFF1C8816B100E2FE1F /* MJRefreshConst.m in Sources */,
-				E6268B101CA056A900FCA829 /* Foundation+Log.m in Sources */,
 				E6E351301C89F28500E2FE1F /* CLAnimationView.m in Sources */,
 				E6E350B51C8827DB00E2FE1F /* MBProgressHUD.m in Sources */,
 				E6E3508C1C881EC300E2FE1F /* GZHGomokuActualStack.m in Sources */,
@@ -1148,6 +1185,8 @@
 				E6AB6C3D1CA2CBCA000AFA76 /* GZHWeatherView.m in Sources */,
 				E60BFC651CA421F5007DE974 /* GZHSettingController.m in Sources */,
 				E6E350081C881CFB00E2FE1F /* DCPicScrollView.m in Sources */,
+				E64BC0331CA83F9F00E7870E /* FMDatabase.m in Sources */,
+				E64BC0341CA83F9F00E7870E /* FMDatabaseAdditions.m in Sources */,
 				E64BC0111CA5AAFA00E7870E /* GZHExplainController.m in Sources */,
 				E6E350041C8816B100E2FE1F /* UIView+MJExtension.m in Sources */,
 				E6E3508F1C881EC300E2FE1F /* GZHGomokuChessElement.m in Sources */,
@@ -1161,6 +1200,7 @@
 				E6AB6C431CA2D6C1000AFA76 /* GZHWeatherSuggestionController.m in Sources */,
 				E6E350951C881EC300E2FE1F /* GZHGomokuLinePoints.m in Sources */,
 				E6E350911C881EC300E2FE1F /* GZHGomokuChessPoint.m in Sources */,
+				E64BC0371CA83F9F00E7870E /* FMResultSet.m in Sources */,
 				E6E350921C881EC300E2FE1F /* GZHGomokuEnvisionStack.m in Sources */,
 				E6E350AC1C88269600E2FE1F /* GZHNewsModel.m in Sources */,
 				E6E3500D1C881E0C00E2FE1F /* HBPlaySoundUtil.m in Sources */,
@@ -1174,6 +1214,7 @@
 				E6E34FC21C8813CA00E2FE1F /* AFNetworkReachabilityManager.m in Sources */,
 				E6E350961C881EC300E2FE1F /* GZHGomokuOverViewController.m in Sources */,
 				E6EC75D71C8E733F00E02405 /* AwesomeMenu.m in Sources */,
+				E64BC0351CA83F9F00E7870E /* FMDatabasePool.m in Sources */,
 				E64BC0201CA7CDE600E7870E /* GZHFeatureVC.m in Sources */,
 				E6E350581C881E4100E2FE1F /* NSString+MJExtension.m in Sources */,
 				E6268B0C1CA0306F00FCA829 /* CLLocation+YCLocation.m in Sources */,
@@ -1183,6 +1224,7 @@
 				E6F2EC5F1C9176E400761CCB /* GZHPetalButton.m in Sources */,
 				E637FF381C9309BE007953E1 /* GZHExpressController.m in Sources */,
 				E6E350A71C88205B00E2FE1F /* GZHGameNewsHomeController.m in Sources */,
+				E64BC0361CA83F9F00E7870E /* FMDatabaseQueue.m in Sources */,
 				E6E17AEC1C91C72B002AFC34 /* GZHPetalView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

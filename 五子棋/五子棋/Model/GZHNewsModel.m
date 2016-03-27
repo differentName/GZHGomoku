@@ -7,7 +7,11 @@
 //
 
 #import "GZHNewsModel.h"
-
+#import "MJExtension.h"
 @implementation GZHNewsModel
+- (NSDictionary *)replacedKeyFromPropertyName
+{
+    return @{@"idstr":@"id"};
+}
 
 @end

@@ -13,4 +13,8 @@
 @property (copy, nonatomic) NSString *content;
 /**新闻标题*/
 @property (copy, nonatomic) NSString *title;
+/**新闻标题*/
+@property (copy, nonatomic) NSString *idstr;
+
+
 @end

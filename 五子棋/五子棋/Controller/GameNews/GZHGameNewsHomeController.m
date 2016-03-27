@@ -14,6 +14,7 @@
 #import "MBProgressHUD+MJ.h"
 #import "GZHNewsModel.h"
 #import "GZHNewDetailController.h"
+#import "GZHSQLTool.h"
 @interface GZHGameNewsHomeController ()
 {
     DCPicScrollView *_scrollView;
@@ -46,10 +47,23 @@
     self.category_id = 446;
     self.page = 1;
     
+    // 2.先尝试从数据库中加载微博数据
+    NSArray *newsAry = [GZHSQLTool newsWithParams:nil];
+    NSLog(@"%@",newsAry);
+    if (newsAry.count) { // 数据库有缓存数据
+        NSLog(@"%@",newsAry);
+        [self.dataAry addObjectsFromArray:[GZHNewsModel objectArrayWithKeyValuesArray:newsAry]];
+        
+        [MBProgressHUD hideHUD];
+        
+        [self.tableView reloadData];
+    } else {
     //请求新闻数据 //子线程请求网络数据避免阻塞
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         [GZHHttpTool get:@"http://112.124.20.32:9999/web_manage/api/news_list.do?admin_id=152" params:@{@"category_id":[NSString stringWithFormat:@"%d",self.category_id ],@"page":[NSString stringWithFormat:@"%d",self.page]} success:^(id json) {
-            //                NSLog(@"%@",json);
+            //将数据保存到数据库
+            [GZHSQLTool saveNews:json[@"data"]];
+            
             [self.dataAry addObjectsFromArray:[GZHNewsModel objectArrayWithKeyValuesArray:json[@"data"]]];
             
             [MBProgressHUD hideHUD];
@@ -63,6 +77,7 @@
         }];
 
     });
+    }
     
     //设置导航栏标题
     self.title = @"五子趣闻";

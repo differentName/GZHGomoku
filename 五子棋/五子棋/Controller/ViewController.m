@@ -332,8 +332,7 @@
 - (void)GZHPetalView:(GZHPetalView *)menu didSelectedButtonAtIndex:(NSUInteger)index{
     
     [menu hide];
-#warning - mark 这个地址等版本功能完善后改为蒲公英对应的下载的地址  另外关于我们模块中的二维码也要更新
-    [[UMSocialControllerService defaultControllerService] setShareText:@"最近我在玩:五子棋 华丽的界面、高超的棋艺、方便的操作,真是刺激,快快来和我一决高下吧!,我在这等你哦:http://www.baidu.com" shareImage:[UIImage imageNamed:@"icon"] socialUIDelegate:nil];
+    [[UMSocialControllerService defaultControllerService] setShareText:@"最近我在玩:五子棋 华丽的界面、高超的棋艺、方便的操作,真是刺激,快快来和我一决高下吧!,我在这等你哦:http://www.pgyer.com/wuziqi" shareImage:[UIImage imageNamed:@"icon"] socialUIDelegate:nil];
     
     switch (index) {
         case 0://微博

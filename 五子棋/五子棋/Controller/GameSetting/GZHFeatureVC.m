@@ -144,7 +144,7 @@
     shareBtn.selected = !shareBtn.selected;
     if (shareBtn.selected == YES) {
         
-        [[UMSocialControllerService defaultControllerService] setShareText:@"最近我在玩:五子棋 华丽的界面、高超的棋艺、方便的操作,真是刺激,快快来和我一决高下吧!,我在这等你哦:http://www.baidu.com" shareImage:[UIImage imageNamed:@"icon"] socialUIDelegate:nil];
+        [[UMSocialControllerService defaultControllerService] setShareText:@"最近我在玩:五子棋 华丽的界面、高超的棋艺、方便的操作,真是刺激,快快来和我一决高下吧!,我在这等你哦:http://www.pgyer.com/wuziqi" shareImage:[UIImage imageNamed:@"icon"] socialUIDelegate:nil];
         [UMSocialSnsPlatformManager getSocialPlatformWithName:UMShareToSina].snsClickHandler(self,[UMSocialControllerService defaultControllerService],YES);
     }
 }

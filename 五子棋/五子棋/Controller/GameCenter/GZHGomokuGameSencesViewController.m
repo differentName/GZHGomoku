@@ -123,11 +123,10 @@
 }
 //截屏分享工功能
 - (void)cutOffToShare{
-#warning - mark 这个地址等版本功能完善后改为蒲公英对应的下载的地址  另外关于我们模块中的二维码也要更新
         CLAnimationView *animationView = [[CLAnimationView alloc]initWithTitleArray:@[@"微博",@"微信",@"朋友圈",@"QQ"] picarray:@[@"share_page_weibo_icon",@"share_page_wechat_icon",@"share_page_wechat_moment_icon",@"share_page_qq_icon"]];
         [animationView selectedWithIndex:^(NSInteger index) {
             NSLog(@"你选择的index ＝＝ %ld",(long)index);
-            [self shareWithIndex:index Content:[NSString stringWithFormat:@"我正在这:http://www.baidu.com 大战机器人 你觉得我前途命运如何?"] Img:nil];
+            [self shareWithIndex:index Content:[NSString stringWithFormat:@"我正在这:http://www.pgyer.com/wuziqi 大战机器人 你觉得我前途命运如何?"] Img:nil];
         }];
         [animationView CLBtnBlock:^(UIButton *btn) {
             NSLog(@"你点了取消按钮");

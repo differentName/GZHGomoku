@@ -9,7 +9,6 @@
 #import "GZHAboutMeController.h"
 #import <ZXingObjC/ZXingObjC.h>
 @interface GZHAboutMeController ()<UIActionSheetDelegate>
-@property (weak, nonatomic) IBOutlet UIButton *erweima;
 @property (nonatomic,strong) UIActionSheet *sheet;
 @end
 

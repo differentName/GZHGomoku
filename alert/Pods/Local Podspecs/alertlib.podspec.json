@@ -1,0 +1,35 @@
+{
+  "name": "alertlib",
+  "version": "0.1.0",
+  "summary": "A short description of alertlib.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://gitee.com/github-13584768",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "differentName": "object_C@126.com"
+  },
+  "source": {
+    "git": "https://gitee.com/github-13584768/testAlertTool.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "alertlib/Classes/**/*",
+  "resource_bundles": {
+    "alertlib": [
+      "alertlib/Assets/*.png"
+    ]
+  },
+  "dependencies": {
+    "AFNetworking": [
+
+    ],
+    "SDWebImage": [
+
+    ]
+  }
+}
